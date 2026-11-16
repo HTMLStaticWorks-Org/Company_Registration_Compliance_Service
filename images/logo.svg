@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 682" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="swooshGradTop" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#00D2FF" />
+      <stop offset="30%" stop-color="#0080FF" />
+      <stop offset="70%" stop-color="#0052CC" />
+      <stop offset="100%" stop-color="#002D80" />
+    </linearGradient>
+
+    <linearGradient id="swooshGradBottom" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#002D80" />
+      <stop offset="40%" stop-color="#0052CC" />
+      <stop offset="75%" stop-color="#0094FF" />
+      <stop offset="100%" stop-color="#00E5FF" />
+    </linearGradient>
+
+    <linearGradient id="buildingFront" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0099FF" />
+      <stop offset="60%" stop-color="#0052CC" />
+      <stop offset="100%" stop-color="#003B95" />
+    </linearGradient>
+
+    <linearGradient id="buildingShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003B95" />
+      <stop offset="100%" stop-color="#001F52" />
+    </linearGradient>
+
+    <linearGradient id="scaleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0052CC" />
+      <stop offset="100%" stop-color="#002D80" />
+    </linearGradient>
+
+    <linearGradient id="docShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0052CC" />
+      <stop offset="100%" stop-color="#003399" />
+    </linearGradient>
+  </defs>
+
+  <!-- ==================== 1. UPPER SWOOSH ARC ==================== -->
+  <path d="M 480 115 C 640 65, 800 100, 875 210 C 935 300, 925 430, 755 550 C 825 440, 845 320, 795 230 C 740 135, 610 95, 480 115 Z" fill="url(#swooshGradTop)" />
+  <path d="M 505 165 C 640 120, 770 150, 825 240 C 865 310, 855 400, 750 490 C 800 410, 810 325, 770 255 C 725 180, 615 145, 505 165 Z" fill="url(#swooshGradTop)" opacity="0.6" />
+
+  <!-- ==================== 2. SKYSCRAPERS / CORPORATE BUILDINGS ==================== -->
+  <g id="skyscrapers">
+    <!-- Left Building (Front-Left) -->
+    <!-- Left Dark Face -->
+    <path d="M 225 248 L 270 216 L 270 472 L 225 452 Z" fill="url(#buildingShadow)" />
+    <!-- 3 Vertical Window Stripes on Left Face -->
+    <path d="M 235 258 L 243 252 L 243 452 L 235 448 Z" fill="#00D2FF" opacity="0.9" />
+    <path d="M 248 248 L 256 242 L 256 457 L 248 453 Z" fill="#00D2FF" opacity="0.9" />
+    <path d="M 261 238 L 267 234 L 267 462 L 261 458 Z" fill="#00D2FF" opacity="0.9" />
+    <!-- Right Bright Face -->
+    <path d="M 270 216 L 320 236 L 320 492 L 270 472 Z" fill="url(#buildingFront)" />
+    <!-- Windows on Right Face -->
+    <path d="M 279 232 L 311 245 L 311 480 L 279 467 Z" fill="#FFFFFF" opacity="0.85" />
+
+    <!-- Center Main Tower (Tallest Skyscraper) -->
+    <!-- Dark/Shadow Left Face -->
+    <path d="M 324 152 L 416 88 L 416 430 L 324 400 Z" fill="url(#buildingShadow)" />
+    <!-- Vertical Window Columns on Left Shadow Face -->
+    <path d="M 338 168 L 354 157 L 354 404 L 338 399 Z" fill="#00D2FF" opacity="0.9" />
+    <path d="M 368 147 L 384 136 L 384 413 L 368 408 Z" fill="#00D2FF" opacity="0.9" />
+    <path d="M 398 126 L 410 118 L 410 422 L 398 418 Z" fill="#00D2FF" opacity="0.9" />
+
+    <!-- Bright Azure Front/Right Face -->
+    <path d="M 416 88 L 508 152 L 508 438 L 416 430 Z" fill="url(#buildingFront)" />
+    <!-- Horizontal Slotted Windows on Right Face -->
+    <g fill="#FFFFFF" opacity="0.92">
+      <path d="M 428 126 L 496 174 L 496 194 L 428 146 Z" />
+      <path d="M 428 166 L 496 214 L 496 234 L 428 186 Z" />
+      <path d="M 428 206 L 496 254 L 496 274 L 428 226 Z" />
+      <path d="M 428 246 L 496 294 L 496 314 L 428 266 Z" />
+      <path d="M 428 286 L 496 334 L 496 354 L 428 306 Z" />
+      <path d="M 428 326 L 496 374 L 496 394 L 428 346 Z" />
+    </g>
+
+    <!-- Right Tower (Behind Central Tower) -->
+    <path d="M 508 184 L 565 204 L 565 448 L 508 438 Z" fill="url(#buildingShadow)" />
+    <g fill="#00D2FF" opacity="0.8">
+      <path d="M 520 212 L 553 224 L 553 240 L 520 228 Z" />
+      <path d="M 520 252 L 553 264 L 553 280 L 520 268 Z" />
+      <path d="M 520 292 L 553 304 L 553 320 L 520 308 Z" />
+      <path d="M 520 332 L 553 344 L 553 360 L 520 348 Z" />
+    </g>
+  </g>
+
+  <!-- ==================== 3. SCALES OF JUSTICE ==================== -->
+  <g id="scalesOfJustice" fill="url(#scaleGrad)">
+    <!-- Top Finial Ball -->
+    <circle cx="688" cy="188" r="18" fill="url(#scaleGrad)" />
+    <!-- Small Ring Collar -->
+    <ellipse cx="688" cy="214" rx="12" ry="5" fill="url(#scaleGrad)" />
+
+    <!-- Arched Balance Beam -->
+    <path d="M 588 236 C 628 220, 668 214, 688 214 C 708 214, 748 220, 788 236 C 794 238, 794 246, 786 244 C 748 232, 708 226, 688 226 C 668 226, 628 232, 590 244 C 582 246, 582 238, 588 236 Z" />
+    
+    <!-- Left & Right Beam Hook Nodes -->
+    <circle cx="586" cy="242" r="7" />
+    <circle cx="790" cy="242" r="7" />
+
+    <!-- Central Fluted Vertical Pillar -->
+    <path d="M 681 224 L 695 224 L 697 385 L 679 385 Z" />
+
+    <!-- Pillar Ring Accent -->
+    <ellipse cx="688" cy="290" rx="11" ry="4" />
+    <ellipse cx="688" cy="355" rx="13" ry="5" />
+
+    <!-- Pedestal Base (Stepped Oval Base) -->
+    <ellipse cx="688" cy="392" rx="48" ry="11" />
+    <path d="M 640 392 C 640 392, 630 415, 616 422 C 650 435, 726 435, 760 422 C 746 415, 736 392, 736 392 Z" />
+    <ellipse cx="688" cy="422" rx="74" ry="15" />
+
+    <!-- Left Hanging Scale -->
+    <!-- 3 Suspension Strings -->
+    <g stroke="url(#scaleGrad)" stroke-width="2.5" stroke-linecap="round">
+      <line x1="586" y1="244" x2="558" y2="322" />
+      <line x1="586" y1="244" x2="586" y2="322" />
+      <line x1="586" y1="244" x2="614" y2="322" />
+    </g>
+    <!-- Left Pan Bowl -->
+    <path d="M 552 322 C 552 322, 554 354, 586 354 C 618 354, 620 322, 620 322 Z" />
+
+    <!-- Right Hanging Scale -->
+    <!-- 3 Suspension Strings -->
+    <g stroke="url(#scaleGrad)" stroke-width="2.5" stroke-linecap="round">
+      <line x1="790" y1="244" x2="762" y2="322" />
+      <line x1="790" y1="244" x2="790" y2="322" />
+      <line x1="790" y1="244" x2="818" y2="322" />
+    </g>
+    <!-- Right Pan Bowl -->
+    <path d="M 756 322 C 756 322, 758 354, 790 354 C 822 354, 824 322, 824 322 Z" />
+  </g>
+
+  <!-- ==================== 4. LEGAL DOCUMENT / CERTIFICATE (CENTER) ==================== -->
+  <g id="legalDocument">
+    <!-- Outer Blue Document Body with Dog-Ear Corner -->
+    <path d="M 405 288 
+             C 392 288, 382 298, 382 312 
+             L 382 510 
+             C 382 524, 392 534, 405 534 
+             L 570 534 
+             C 583 534, 593 524, 593 510 
+             L 593 342 
+             L 540 288 
+             Z" 
+          fill="#FFFFFF" 
+          stroke="url(#docShadow)" 
+          stroke-width="14" 
+          stroke-linejoin="round" />
+
+    <!-- Dog-Ear Fold Flap (Top Right) -->
+    <path d="M 538 288 L 538 340 C 538 344, 542 344, 546 344 L 593 344 Z" 
+          fill="url(#docShadow)" />
+
+    <!-- Document Content Lines -->
+    <rect x="418" y="336" width="94" height="12" rx="6" fill="#004FB8" />
+    <rect x="418" y="366" width="128" height="12" rx="6" fill="#004FB8" />
+    <rect x="418" y="396" width="76" height="12" rx="6" fill="#004FB8" />
+
+    <!-- Certificate Seal Ribbons -->
+    <path d="M 498 475 L 488 534 L 508 522 L 528 534 L 518 475 Z" fill="url(#scaleGrad)" />
+    <path d="M 526 475 L 536 534 L 556 522 L 576 534 L 566 475 Z" fill="url(#scaleGrad)" />
+
+    <!-- Certificate Starburst/Scalloped Seal -->
+    <circle cx="532" cy="452" r="38" fill="url(#scaleGrad)" />
+    <circle cx="532" cy="452" r="32" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="4,2" />
+    <circle cx="532" cy="452" r="26" fill="url(#scaleGrad)" />
+
+    <!-- Crisp White Checkmark in Seal -->
+    <path d="M 520 452 L 528 460 L 545 443" 
+          fill="none" 
+          stroke="#FFFFFF" 
+          stroke-width="6" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+  </g>
+
+  <!-- ==================== 5. LOWER DYNAMIC SWOOSH ==================== -->
+  <g id="lowerSwoosh">
+    <!-- Main Sweeping Lower Crescent -->
+    <path d="M 855 460 
+             C 800 560, 660 625, 490 625 
+             C 320 625, 195 565, 140 480 
+             C 125 456, 120 440, 125 435 
+             C 130 430, 145 440, 165 465 
+             C 215 530, 335 580, 480 580 
+             C 630 580, 755 520, 810 440 
+             C 830 410, 850 400, 855 460 Z" 
+          fill="url(#swooshGradBottom)" />
+
+    <!-- Extra dynamic speed wave at bottom left -->
+    <path d="M 130 450 
+             C 180 575, 340 645, 520 645 
+             C 570 645, 620 638, 665 625 
+             C 580 648, 480 652, 400 642 
+             C 270 625, 170 550, 130 450 Z" 
+          fill="url(#swooshGradBottom)" 
+          opacity="0.8" />
+  </g>
+</svg>

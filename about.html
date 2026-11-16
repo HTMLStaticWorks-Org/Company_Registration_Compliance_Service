@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Verdant Business Services</title>
+  <meta name="description" content="Learn about Verdant Business Services, our corporate advisory mission, chartered secretarial expertise, and commitment to transparent company registration and governance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="assets/js/theme.js"></script>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="alternate icon" type="image/png" href="assets/images/website-logo.png">
+</head>
+<body>
+
+  <!-- Sticky Global Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Verdant Business Services Homepage">
+        <div class="brand-icon-box">
+          <img src="assets/images/logo.svg" alt="Verdant Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-title">VERDANT</span>
+          <span class="brand-subtitle">Business Services</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1</a>
+            <a href="home-2.html" class="dropdown-item">Home 2</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="header-actions">
+        <button class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"></button>
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Right to Left / Left to Right">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16M16 3l4 4-4 4"/>
+            <path d="M20 17H4M8 21l-4-4 4-4"/>
+          </svg>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+        <button class="hamburger-btn" aria-label="Open mobile navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-dropdown">
+      <button class="mobile-nav-link mobile-dropdown-btn" aria-expanded="true">
+        <span>Home</span>
+        <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="index.html" class="mobile-sublink">Home 1</a>
+        <a href="home-2.html" class="mobile-sublink">Home 2</a>
+      </div>
+    </div>
+    <a href="about.html" class="mobile-nav-link active">About</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="products.html" class="mobile-nav-link">Products</a>
+    <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+    <a href="resources.html" class="mobile-nav-link">Resources</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+    <div class="mobile-drawer-toggles">
+      <button class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme" title="Toggle Light / Dark Theme"></button>
+      <button class="toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Right to Left / Left to Right">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 7h16M16 3l4 4-4 4"/>
+          <path d="M20 17H4M8 21l-4-4 4-4"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-actions">
+      <a href="login.html" class="btn btn-primary btn-block">Login</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- 01. HERO (image-15.png) -->
+    <section class="section section-navy" style="position: relative; overflow: hidden; padding-block: clamp(4.5rem, 7vw, 7rem);">
+      <div style="position: absolute; inset: 0; opacity: 0.25; mix-blend-mode: luminosity;">
+        <img src="images/image-15.png" alt="Dramatic Corporate Glass Skyscraper reaching into the sky" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 860px;">
+        <div class="eyebrow" style="background: rgba(255,255,255,0.12); color: #FFFFFF; border-color: rgba(255,255,255,0.25);">
+          OUR PURPOSE & CREDENTIALS
+        </div>
+        <h1 style="font-size: clamp(2.4rem, 4.5vw, 3.8rem); margin-bottom: 1.5rem; color: #FFFFFF;">
+          YOUR TRUSTED PARTNER FOR INCORPORATION &amp; CORPORATE COMPLIANCE
+        </h1>
+        <p style="font-size: 1.25rem; color: #CBD5E1; line-height: 1.7;">
+          We bridge the gap between regulatory mandates and ambitious business builders, transforming administrative complexity into clear, reliable execution.
+        </p>
+      </div>
+    </section>
+
+    <!-- 02. OUR STORY (image-79.png & image-13.png) -->
+    <section class="section about-story-section" id="about-story">
+      <div class="container">
+        <div class="grid-2" style="gap: clamp(2rem, 5vw, 4.5rem); align-items: center;">
+          <div>
+            <div class="eyebrow">OUR ORIGIN & JOURNEY</div>
+            <h2 style="margin-bottom: 1.25rem;">HOW WE SIMPLIFY INCORPORATION &amp; STATUTORY COMPLIANCE</h2>
+            <p style="margin-bottom: 1.25rem;">
+              Verdant Business Services was established with a singular objective: to deliver transparent, reliable, and accessible company formation and governance solutions for entrepreneurs, startups, and growing enterprises.
+            </p>
+            <p style="margin-bottom: 1.25rem;">
+              Too often, business founders encounter slow bureaucracy, obscure pricing, and conflicting advice when attempting to register a company or fulfill ongoing statutory requirements. We unified practicing Chartered Accountants, corporate attorneys, and Company Secretaries with intuitive digital workflows.
+            </p>
+            <div class="about-story-stats">
+              <div class="about-stat-card">
+                <div class="counter-val" data-target="15000" data-suffix="+">0</div>
+                <span>Entities Registered &amp; Advised</span>
+              </div>
+              <div class="about-stat-card">
+                <div class="counter-val" data-target="99" data-suffix="%">0</div>
+                <span>Timely Filing Compliance Rate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dual Visual Composition: image-79.png & image-13.png -->
+          <div class="about-story-visuals dual-visual-grid">
+            <div class="about-story-img-wrap dual-visual-img-wrap" data-tilt>
+              <img src="images/image-79.png" alt="Founding team in brick-accented workspace with warm filament lighting">
+            </div>
+            <div class="about-story-img-wrap dual-visual-img-wrap about-story-img-offset dual-visual-offset" data-tilt>
+              <img src="images/image-13.png" alt="Executive corporate boardroom at night overlooking city skyline">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. OUR MISSION & VISION (image-29.png & image-94.png) -->
+    <section class="section section-ice">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">GUIDING PRINCIPLES</div>
+          <h2>OUR MISSION & STRATEGIC VISION</h2>
+          <p>Committed to creating an orderly, dependable ecosystem where every enterprise flourishes.</p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Mission Box -->
+          <div class="corp-card" style="padding: 2.5rem;" data-tilt>
+            <div style="width: 100%; height: 240px; border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1.75rem;">
+              <img src="images/image-29.png" alt="Executive team presenting growth strategy and quarterly targets" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <span class="eyebrow">Core Mission</span>
+            <h3 style="margin-bottom: 1rem;">Make Business Registration & Compliance Understandable</h3>
+            <p>Our mission is to eliminate confusion, unexpected charges, and legal delays. We empower founders with actionable guidance, structured checklists, and automated reminders so their corporate status remains spotless.</p>
+          </div>
+
+          <!-- Vision Box -->
+          <div class="corp-card" style="padding: 2.5rem;" data-tilt>
+            <div style="width: 100%; height: 240px; border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1.75rem;">
+              <img src="images/image-94.png" alt="Modern multi-story commercial corporate headquarters at twilight" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <span class="eyebrow">Long-Term Vision</span>
+            <h3 style="margin-bottom: 1rem;">The Most Trusted Support Partner For Growing Enterprises</h3>
+            <p>We envision a frictionless commercial landscape where startups launch seamlessly, maintain full regulatory accountability effortlessly, and scale from single-founder businesses into multi-national corporations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. OUR EXPERTISE (4 Visual Areas - Even Number Rule) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">CORE COMPETENCIES</div>
+          <h2>OUR CORE LEGAL, TAX &amp; SECRETARIAL DISCIPLINES</h2>
+          <p>Delivered by accredited practitioners with deep statutory experience.</p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Area 1: Company Incorporation (image-59.png) -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-59.png" alt="Ministry of Corporate Affairs Certificate of Incorporation and GST dossier">
+              <span class="card-badge">Entity Incorporation</span>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Company Incorporation</h4>
+              <p class="card-desc">Comprehensive MCA filing, MoA & AoA drafting, DSC generation, and DIN allocation for Pvt Ltd, LLP, and OPC entities.</p>
+            </div>
+          </div>
+
+          <!-- Area 2: Tax & GST Support (image-72.png) -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-72.png" alt="Chartered Accountant with Direct Taxes and GST Law textbooks">
+              <span class="card-badge">Chartered Accountancy</span>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Tax & GST Advisory</h4>
+              <p class="card-desc">GSTIN registrations, monthly return reconciliation (GSTR-1, 3B), advance tax planning, and TDS return filings.</p>
+            </div>
+          </div>
+
+          <!-- Area 3: Corporate Documentation (image-4.png) -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-4.png" alt="Corporate legal counsel examining document binders in executive office">
+              <span class="card-badge">Legal Counsel</span>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Corporate Documentation</h4>
+              <p class="card-desc">Shareholder agreements, board resolution drafting, founder equity vesting deeds, and commercial service contracts.</p>
+            </div>
+          </div>
+
+          <!-- Area 4: Ongoing Compliance (image-21.png) -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-21.png" alt="Corporate professionals reviewing strategic growth plans and KPIs">
+              <span class="card-badge">Statutory Secretarial</span>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Ongoing Compliance</h4>
+              <p class="card-desc">Annual ROC returns (AOC-4 & MGT-7), statutory registers maintenance, director KYC updates, and secretarial audit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. OUR WORKING PRINCIPLES (image-97.png & image-40.png) -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">ETHICAL STANDARDS</div>
+          <h2>OUR CORE WORKING PRINCIPLES</h2>
+          <p>Uncompromising values guiding every client consultation, filing, and secretarial review.</p>
+        </div>
+
+        <div class="grid-2" style="gap: clamp(2rem, 4vw, 4rem); align-items: center;">
+          <!-- Left: Principles List -->
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div style="padding: 1.25rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border-left: 4px solid var(--color-primary);">
+              <h4 style="font-size: 1.1rem; margin-bottom: 0.35rem;">Transparency</h4>
+              <p style="font-size: 0.92rem; margin-bottom: 0;">We clearly differentiate statutory government fees from professional retainers. Zero hidden invoices.</p>
+            </div>
+
+            <div style="padding: 1.25rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border-left: 4px solid #10B981;">
+              <h4 style="font-size: 1.1rem; margin-bottom: 0.35rem;">Accuracy</h4>
+              <p style="font-size: 0.92rem; margin-bottom: 0;">Multi-tier verification by practicing CS professionals eliminates ROC queries and resubmission delays.</p>
+            </div>
+
+            <div style="padding: 1.25rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border-left: 4px solid #0284C7;">
+              <h4 style="font-size: 1.1rem; margin-bottom: 0.35rem;">Accountability</h4>
+              <p style="font-size: 0.92rem; margin-bottom: 0;">We take full ownership of statutory deadlines, tracking every compliance date proactively in your portal.</p>
+            </div>
+
+            <div style="padding: 1.25rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border-left: 4px solid #F59E0B;">
+              <h4 style="font-size: 1.1rem; margin-bottom: 0.35rem;">Client Focus & Long-Term Support</h4>
+              <p style="font-size: 0.92rem; margin-bottom: 0;">We don't disappear after incorporation. We serve as your ongoing corporate governance partner for years to come.</p>
+            </div>
+          </div>
+
+          <!-- Right: Leadership Visual Pair (image-97.png & image-40.png) -->
+          <div class="about-leadership-visuals dual-visual-grid">
+            <div class="about-story-img-wrap dual-visual-img-wrap" data-tilt>
+              <img src="images/image-97.png" alt="Managing Partner standing in high-rise boardroom overlooking city">
+            </div>
+            <div class="about-story-img-wrap dual-visual-img-wrap about-story-img-offset dual-visual-offset" data-tilt>
+              <img src="images/image-40.png" alt="Senior corporate advisory board of directors">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. FINAL CTA (image-93.png) -->
+    <section class="section section-navy" style="position: relative; overflow: hidden;">
+      <div style="position: absolute; inset: 0; opacity: 0.25; mix-blend-mode: overlay;">
+        <img src="images/image-93.png" alt="Luxury Corporate Office Suite with Navy Wainscoting" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 820px;">
+        <div class="eyebrow" style="background: rgba(255,255,255,0.12); color: #FFFFFF; border-color: rgba(255,255,255,0.25);">PARTNER WITH EXPERTS</div>
+        <h2 style="font-size: clamp(2.2rem, 4.2vw, 3.4rem); margin-bottom: 1.25rem;">START YOUR REGISTRATION OR COMPLIANCE JOURNEY TODAY</h2>
+        <p style="font-size: 1.2rem; color: #CBD5E1; margin-bottom: 2.5rem;">
+          Whether launching your first tech venture or organizing compliance for an established enterprise, our team is ready to assist.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;" class="cta-btn-group">
+          <a href="services.html#company-registration" class="btn btn-primary btn-lg">EXPLORE OUR SERVICES</a>
+          <a href="contact.html#contact-form-section" class="btn btn-outline-white btn-lg">SCHEDULE A CONSULTATION</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+                <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #FFFFFF;">
+            <div class="brand-icon-box">
+              <img src="assets/images/logo.svg" alt="Verdant Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-title-wrap">
+              <span class="brand-title" style="color: #FFFFFF;">VERDANT</span>
+              <span class="brand-subtitle" style="color: #60A5FA;">Business Services</span>
+            </div>
+          </a>
+          <p>Professional corporate consulting, legal entity registration, GST services, and annual statutory compliance.</p>
+          <div class="footer-social-links" aria-label="Social media links">
+            <a href="https://linkedin.com" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://twitter.com" class="footer-social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="https://facebook.com" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://youtube.com" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home 1</a>
+            <a href="home-2.html" class="footer-link">Home 2</a>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="services.html" class="footer-link">Services</a>
+            <a href="products.html" class="footer-link">Products</a>
+            <a href="pricing.html" class="footer-link">Pricing</a>
+            <a href="resources.html" class="footer-link">Resources</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <div class="footer-links">
+            <a href="services.html" class="footer-link">Company Registration</a>
+            <a href="services.html" class="footer-link">GST & Taxation</a>
+            <a href="services.html" class="footer-link">Legal Documentation</a>
+            <a href="services.html" class="footer-link">Annual ROC Filing</a>
+            <a href="services.html" class="footer-link">Director KYC</a>
+            <a href="services.html" class="footer-link">Trademark Filing</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Support</h4>
+          <div class="footer-links">
+            <a href="login.html" class="footer-link">Client Login</a>
+            <a href="register.html" class="footer-link">Register Account</a>
+            <a href="dashboard.html" class="footer-link">Client Portal</a>
+            <a href="resources.html" class="footer-link">Knowledgebase & Guides</a>
+            <a href="contact.html" class="footer-link">Helpdesk Support</a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-newsletter-col">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 1rem;">Subscribe to monthly regulatory updates, compliance deadlines, and tax notices.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your business email" required aria-label="Business email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Verdant Business Services Pvt Ltd. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Legal Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" aria-label="Scroll to top of page">↑</button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactions.js"></script>
+</body>
+</html>
+

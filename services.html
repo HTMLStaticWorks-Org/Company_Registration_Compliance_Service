@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Services Catalogue | Verdant Business Services</title>
+  <meta name="description" content="Explore end-to-end company registration, GST taxation, corporate legal drafting, annual ROC compliance, and statutory licensing solutions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="assets/js/theme.js"></script>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="alternate icon" type="image/png" href="assets/images/website-logo.png">
+</head>
+<body>
+
+  <!-- Sticky Global Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Verdant Business Services Homepage">
+        <div class="brand-icon-box">
+          <img src="assets/images/logo.svg" alt="Verdant Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-title">VERDANT</span>
+          <span class="brand-subtitle">Business Services</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1</a>
+            <a href="home-2.html" class="dropdown-item">Home 2</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="header-actions">
+        <button class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"></button>
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Right to Left / Left to Right">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16M16 3l4 4-4 4"/>
+            <path d="M20 17H4M8 21l-4-4 4-4"/>
+          </svg>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+        <button class="hamburger-btn" aria-label="Open mobile navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-dropdown">
+      <button class="mobile-nav-link mobile-dropdown-btn" aria-expanded="true">
+        <span>Home</span>
+        <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="index.html" class="mobile-sublink">Home 1</a>
+        <a href="home-2.html" class="mobile-sublink">Home 2</a>
+      </div>
+    </div>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="services.html" class="mobile-nav-link active">Services</a>
+    <a href="products.html" class="mobile-nav-link">Products</a>
+    <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+    <a href="resources.html" class="mobile-nav-link">Resources</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+    <div class="mobile-drawer-toggles">
+      <button class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme" title="Toggle Light / Dark Theme"></button>
+      <button class="toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Right to Left / Left to Right">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 7h16M16 3l4 4-4 4"/>
+          <path d="M20 17H4M8 21l-4-4 4-4"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-actions">
+      <a href="login.html" class="btn btn-primary btn-block">Login</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- 01. SERVICES HERO (image-34.png) -->
+    <section class="section section-ice" style="position: relative; overflow: hidden; padding-block: clamp(4rem, 6vw, 6.5rem);">
+      <div class="container">
+        <div class="hero-split" style="gap: clamp(2rem, 4vw, 4rem); align-items: center;">
+          <div>
+            <div class="eyebrow">ENTERPRISE SOLUTIONS CATALOGUE</div>
+            <h1 style="margin-bottom: 1.25rem;">COMPLETE CORPORATE LEGAL, TAX &amp; COMPLIANCE SERVICES</h1>
+            <p style="font-size: 1.15rem; margin-bottom: 2rem;">
+              Explore professional solutions for registering, managing, and maintaining your business. Guided by certified Company Secretaries and Chartered Accountants.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;" class="hero-cta-group">
+              <a href="#company-registration" class="btn btn-primary btn-lg">FIND YOUR SERVICE</a>
+              <a href="contact.html#contact-form-section" class="btn btn-secondary btn-lg">REQUEST A QUOTE</a>
+            </div>
+          </div>
+          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl);" data-tilt>
+            <img src="images/image-34.png" alt="Boardroom meeting with executive consulting team presentation" style="width: 100%; height: auto; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. COMPANY REGISTRATION (6 Cards - Even Number Rule) -->
+    <section class="section" id="company-registration">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">INCORPORATION PRACTICE</div>
+          <h2>COMPANY REGISTRATION SERVICES</h2>
+          <p>Official legal entity formation with Ministry of Corporate Affairs (MCA) registration, DSC, DIN, and MoA/AoA drafting.</p>
+        </div>
+
+        <div class="grid-6">
+          <!-- Card 1: Private Limited Company (image-69.png) -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-69.png" alt="Executive handshake across desk with Pvt Ltd, LLP, and GST registration dossiers">
+              <span class="card-badge">Equity Funding Ready</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Private Limited Company</h3>
+              <p class="card-desc">The premier corporate entity structure for scalable startups. Offers clear equity allocation, limited liability, and institutional investor preference.</p>
+              <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1rem;">
+                <strong>Suitable for:</strong> Startups, tech ventures, equity-funded companies.<br>
+                <strong>Documents:</strong> PAN, Aadhaar/Passport, Utility Bill, Bank Statement.
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-secondary btn-sm" data-service-modal="pvt-ltd">View Details</a>
+                <a href="pricing.html#registration-pricing" class="btn btn-primary btn-sm">Incorporate Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Limited Liability Partnership (image-27.png) -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-27.png" alt="Corporate partners analyzing partnership deed and trend data on glass partition">
+              <span class="card-badge">Professional Practices</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">LLP Registration</h3>
+              <p class="card-desc">Combines the operational flexibility of a partnership with the protective veil of corporate limited liability and reduced statutory audits.</p>
+              <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1rem;">
+                <strong>Suitable for:</strong> Consultants, service agencies, legal & design firms.<br>
+                <strong>Documents:</strong> Partner KYC, Registered Address NOC, Drafted LLP Deed.
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-secondary btn-sm" data-service-modal="llp">View Details</a>
+                <a href="pricing.html#registration-pricing" class="btn btn-primary btn-sm">Register LLP</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: One Person Company (image-84.png) -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-84.png" alt="Solo entrepreneur working on laptop in sunlit atrium">
+              <span class="card-badge">Single Shareholder</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">OPC Registration</h3>
+              <p class="card-desc">Allows a solo promoter to own and operate a fully incorporated corporate entity without requiring a co-director, backed by a designated nominee.</p>
+              <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1rem;">
+                <strong>Suitable for:</strong> Solo founders, independent consultants, solo tech creators.<br>
+                <strong>Documents:</strong> Founder & Nominee PAN, Proof of Address, INC-3 Consent.
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-secondary btn-sm" data-service-modal="opc">View Details</a>
+                <a href="pricing.html#registration-pricing" class="btn btn-primary btn-sm">Register OPC</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Partnership Firm (image-5.png) -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-5.png" alt="Close-up of business agreement signature with luxury fountain pen">
+              <span class="card-badge">Registered Firm</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Partnership Firm</h3>
+              <p class="card-desc">Custom drafted Partnership Deed executed under the Indian Partnership Act with Registrar of Firms (ROF) registration and commercial PAN allotment.</p>
+              <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1rem;">
+                <strong>Suitable for:</strong> Family businesses, joint trading firms, local partnerships.<br>
+                <strong>Documents:</strong> Partner Identity, Stamped Partnership Deed, Firm PAN.
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-secondary btn-sm" data-service-modal="partnership">View Details</a>
+                <a href="pricing.html#registration-pricing" class="btn btn-primary btn-sm">Draft Deed</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Sole Proprietorship (image-25.png) -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-25.png" alt="Entrepreneurs examining commercial documents and swatches at wooden desk">
+              <span class="card-badge">Simplest Setup</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Proprietorship Support</h3>
+              <p class="card-desc">Fast setup designed for independent retail traders and freelancers, bundled with MSME/Udyam certification and commercial bank resolution.</p>
+              <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1rem;">
+                <strong>Suitable for:</strong> Independent merchants, freelance professionals, retail shops.<br>
+                <strong>Documents:</strong> Proprietor PAN, Aadhaar, Business premise electricity bill.
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-secondary btn-sm" data-service-modal="proprietorship">View Details</a>
+                <a href="pricing.html#registration-pricing" class="btn btn-primary btn-sm">Start Setup</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Startup Incorporation Guidance (image-62.png) -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-62.png" alt="Startup consultant presenting legal and funding roadmap to young entrepreneurs">
+              <span class="card-badge">DPIIT & Cap Table</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Startup Incorporation Guidance</h3>
+              <p class="card-desc">Holistic venture launch advisory encompassing founder vesting schedules, intellectual property assignment, and DPIIT recognition.</p>
+              <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1rem;">
+                <strong>Suitable for:</strong> Seed-stage innovators, incubator startups, tech teams.<br>
+                <strong>Documents:</strong> Pitch Deck summary, Founder ID, MoA Object draft.
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-secondary btn-sm" data-service-modal="startup">View Details</a>
+                <a href="products.html#startup-packages" class="btn btn-primary btn-sm">Get Guidance</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. TAX & GST SERVICES (image-61.png & image-71.png) -->
+    <section class="section section-alt" id="tax-gst">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">INDIRECT & DIRECT TAXATION</div>
+          <h2>TAX & GST SERVICES</h2>
+          <p>Full statutory tax registration, monthly return filing, and direct taxation compliance managed by Chartered Accountants.</p>
+        </div>
+
+        <div class="grid-2" style="gap: clamp(2rem, 4vw, 4rem); align-items: center;">
+          <div>
+            <h3 style="margin-bottom: 1rem;">Comprehensive Tax Filings & GSTIN Support</h3>
+            <p style="margin-bottom: 1.25rem;">
+              We manage all indirect tax requirements so your business remains fully compliant with the Goods & Services Tax network. Avoid late fees, interest penalties, and blocked input tax credit (ITC).
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="padding: 1rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                <strong style="color: var(--color-primary); display: block; margin-bottom: 0.25rem;">• GST Registration & State Filings</strong>
+                <span style="font-size: 0.9rem; color: var(--text-muted);">New GSTIN allocation within 3-5 business days for single and multi-state entities.</span>
+              </div>
+              <div style="padding: 1rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                <strong style="color: var(--color-primary); display: block; margin-bottom: 0.25rem;">• Monthly Return Support (GSTR-1 & 3B)</strong>
+                <span style="font-size: 0.9rem; color: var(--text-muted);">Invoice reconciliation, sales reporting, and tax liability computation.</span>
+              </div>
+              <div style="padding: 1rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                <strong style="color: var(--color-primary); display: block; margin-bottom: 0.25rem;">• PAN, TAN & TDS Returns</strong>
+                <span style="font-size: 0.9rem; color: var(--text-muted);">Quarterly TDS return preparation (Form 24Q, 26Q) and Form 16 issuance assistance.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dual Visuals: image-61.png & image-71.png -->
+          <div class="dual-visual-grid">
+            <div class="dual-visual-img-wrap" data-tilt>
+              <img src="images/image-61.png" alt="Accountant reviewing financial accounting spreadsheets with client">
+            </div>
+            <div class="dual-visual-img-wrap dual-visual-offset" data-tilt>
+              <img src="images/image-71.png" alt="Rajesh Kumar Financial Advisor consulting client on tax records">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. CORPORATE LEGAL & DOCUMENTATION (image-46.png & image-54.png) -->
+    <section class="section" id="corporate-legal">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">LEGAL DRAFTING</div>
+          <h2>CORPORATE LEGAL & DOCUMENTATION</h2>
+          <p>Protecting commercial relationships and founding rights with enforceable, attorney-drafted contracts.</p>
+        </div>
+
+        <div class="grid-2" style="gap: clamp(2rem, 4vw, 4rem); align-items: center;">
+          <!-- Visuals: image-46.png & image-54.png -->
+          <div class="dual-visual-grid">
+            <div class="dual-visual-img-wrap" data-tilt>
+              <img src="images/image-46.png" alt="Corporate counsel pointing to legal contract clause with tablet">
+            </div>
+            <div class="dual-visual-img-wrap dual-visual-offset" data-tilt>
+              <img src="images/image-54.png" alt="Attorney presenting contract with scales of justice and gavel">
+            </div>
+          </div>
+
+          <div>
+            <h3 style="margin-bottom: 1rem;">Statutory Memorandums & Commercial Agreements</h3>
+            <p style="margin-bottom: 1.25rem;">
+              Weak legal agreements lead to costly founder disputes and delayed funding rounds. Our corporate lawyers draft custom instruments reflecting your exact commercial intentions.
+            </p>
+            <ul style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
+              <li>• <strong>MoA & AoA Drafting:</strong> Custom main and ancillary business objects adhering to MCA Table A.</li>
+              <li>• <strong>Shareholders & Founders Agreements:</strong> Vesting schedules, drag-along, and right of first refusal.</li>
+              <li>• <strong>Board Resolutions:</strong> Bank account authorisations, share allotments, and director appointment resolutions.</li>
+              <li>• <strong>Commercial Service Contracts:</strong> Master services agreements, NDAs, and independent contractor deeds.</li>
+            </ul>
+            <a href="contact.html#contact-form-section" class="btn btn-primary" style="margin-top: 1.5rem;">Request Contract Drafting</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. ANNUAL & ONGOING COMPLIANCE (image-81.png & image-96.png) -->
+    <section class="section section-ice" id="annual-compliance">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">YEAR-ROUND RETAINER</div>
+          <h2>ANNUAL & ONGOING COMPLIANCE</h2>
+          <p>Statutory secretarial audits, ROC filings, and continuous regulatory monitoring for active companies.</p>
+        </div>
+
+        <div class="grid-2" style="gap: clamp(2rem, 4vw, 4rem); align-items: center;">
+          <div>
+            <h3 style="margin-bottom: 1rem;">Complete ROC Secretarial Peace of Mind</h3>
+            <p style="margin-bottom: 1.25rem;">
+              Non-compliance under the Companies Act carries steep daily penalties and risks director disqualification. Our annual retainers ensure all statutory returns are prepared and filed well in advance of cutoffs.
+            </p>
+            <div class="compliance-cards-grid">
+              <div class="compliance-filing-card">
+                <h4>Form AOC-4</h4>
+                <p>Filing of Audited Financial Accounts with MCA.</p>
+              </div>
+              <div class="compliance-filing-card">
+                <h4>Form MGT-7</h4>
+                <p>Annual Return of shareholding &amp; management.</p>
+              </div>
+              <div class="compliance-filing-card">
+                <h4>DIR-3 KYC</h4>
+                <p>Annual KYC verification for every active DIN holder.</p>
+              </div>
+              <div class="compliance-filing-card">
+                <h4>Statutory Registers</h4>
+                <p>Digitally maintained Member &amp; Debenture registers.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dual Visuals: image-81.png & image-96.png -->
+          <div class="dual-visual-grid">
+            <div class="dual-visual-img-wrap" data-tilt>
+              <img src="images/image-81.png" alt="Corporate team huddled over due diligence compliance paperwork late evening">
+            </div>
+            <div class="dual-visual-img-wrap dual-visual-offset" data-tilt>
+              <img src="images/image-96.png" alt="Curved boardroom overlooking World Trade Center with financial analytics">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. BUSINESS LICENCES & REGISTRATIONS (image-57.png & image-75.png) -->
+    <section class="section" id="business-licences">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">STATUTORY CLEARANCES</div>
+          <h2>BUSINESS LICENCES & REGISTRATIONS</h2>
+          <p>Local, state, and central registrations required to operate commercially in full legality.</p>
+        </div>
+
+        <div class="grid-2" style="gap: clamp(2rem, 4vw, 4rem); align-items: center;">
+          <!-- Dual Visuals: image-57.png & image-75.png -->
+          <div class="dual-visual-grid">
+            <div class="dual-visual-img-wrap" data-tilt>
+              <img src="images/image-57.png" alt="Trademark registration and brand protection document folder">
+            </div>
+            <div class="dual-visual-img-wrap dual-visual-offset" data-tilt>
+              <img src="images/image-75.png" alt="Innovation hub research team reviewing product licensing and certifications">
+            </div>
+          </div>
+
+          <div>
+            <h3 style="margin-bottom: 1rem;">Essential Operating Licences & Intellectual Property</h3>
+            <p style="margin-bottom: 1.25rem;">
+              Depending on your location and industry, operating legally requires sector-specific permits. We handle government interface from application to certificate issuance.
+            </p>
+            <ul style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
+              <li>• <strong>MSME / Udyam Registration:</strong> Priority lending rates and government tender exemptions.</li>
+              <li>• <strong>Trademark (TM) Registration:</strong> Brand name, logo, and commercial slogan legal ownership.</li>
+              <li>• <strong>Shop & Establishment Licence:</strong> Mandatory local municipal registration for commercial premises.</li>
+              <li>• <strong>Import Export Code (IEC):</strong> DGFT registration for international cross-border trading.</li>
+              <li>• <strong>Professional Tax (PT) Registration:</strong> State municipal employee tax clearance.</li>
+            </ul>
+            <a href="contact.html#contact-form-section" class="btn btn-primary" style="margin-top: 1.5rem;">Apply For Licences</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. OUR SERVICE DELIVERY PROCESS (Enterprise Protocol Blueprint) -->
+    <section class="section section-protocol-blueprint" id="service-process">
+      <div class="container">
+        <div class="protocol-split-layout">
+
+          <!-- Left: Sticky Command & Overview Panel -->
+          <div class="protocol-command-panel">
+            <div class="protocol-live-tag">
+              <span class="pulse-dot"></span>
+              ORDERED EXECUTION PROTOCOL
+            </div>
+            
+            <h2 class="protocol-command-heading">HOW WE DELIVER YOUR INCORPORATION &amp; FILINGS</h2>
+            
+            <p class="protocol-command-lead">
+              A transparent, proven six-step protocol engineered for statutory precision, operational velocity, and audit-grade consistency across all Indian regulatory authorities.
+            </p>
+
+            <!-- Metrics Highlights -->
+            <div class="protocol-metrics-box">
+              <div class="protocol-metric-row">
+                <span class="protocol-metric-label">Average Filing Turnaround</span>
+                <span class="protocol-metric-val">4 Business Days</span>
+              </div>
+              <div class="protocol-metric-row">
+                <span class="protocol-metric-label">First-Time Approval Rate</span>
+                <span class="protocol-metric-val">99.4% Flawless</span>
+              </div>
+              <div class="protocol-metric-row">
+                <span class="protocol-metric-label">Review Protocol</span>
+                <span class="protocol-metric-val">Dual CS / CA Sign-off</span>
+              </div>
+            </div>
+
+            <!-- Operational Standards Checklist -->
+            <div class="protocol-features-list">
+              <div class="protocol-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Zero Government Query Delays Guarantee</span>
+              </div>
+              <div class="protocol-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Encrypted 256-bit Digital Document Vault</span>
+              </div>
+              <div class="protocol-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Live SMS &amp; Email Milestone Notifications</span>
+              </div>
+            </div>
+
+            <a href="contact.html#contact-form-section" class="btn btn-primary protocol-cta-btn">
+              <span>Initiate Engagement</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Right: Connected Sequential Protocol Stream -->
+          <div class="protocol-pipeline-column">
+            <!-- Continuous Illuminated Gradient Line -->
+            <div class="protocol-pipeline-line" aria-hidden="true"></div>
+
+            <!-- Step 01 -->
+            <div class="protocol-stream-card">
+              <div class="protocol-node-circle" aria-label="Step 1">01</div>
+              <div class="protocol-card-content">
+                <div class="protocol-card-top">
+                  <span class="protocol-phase-tag">Phase 01 • Consultation</span>
+                  <span class="protocol-sla-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Turnaround: Day 1
+                  </span>
+                </div>
+                <div class="protocol-title-row">
+                  <div class="protocol-icon-box" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14 2 14 8 20 8"/>
+                      <line x1="16" y1="13" x2="8" y2="13"/>
+                      <line x1="16" y1="17" x2="8" y2="17"/>
+                      <line x1="10" y1="9" x2="8" y2="9"/>
+                    </svg>
+                  </div>
+                  <h3 class="protocol-card-title">Requirement Analysis</h3>
+                </div>
+                <p class="protocol-card-desc">Initial consultation assessing your entity scale, tax thresholds, and founding structure to determine exact compliance scope.</p>
+                <div class="protocol-chips-row">
+                  <span class="protocol-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Scale &amp; Structure Review
+                  </span>
+                  <span class="protocol-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Tax Threshold Audit
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="protocol-stream-card">
+              <div class="protocol-node-circle" aria-label="Step 2">02</div>
+              <div class="protocol-card-content">
+                <div class="protocol-card-top">
+                  <span class="protocol-phase-tag">Phase 02 • Retainer</span>
+                  <span class="protocol-sla-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Turnaround: Day 1–2
+                  </span>
+                </div>
+                <div class="protocol-title-row">
+                  <div class="protocol-icon-box" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                    </svg>
+                  </div>
+                  <h3 class="protocol-card-title">Service Selection</h3>
+                </div>
+                <p class="protocol-card-desc">Selection of transparent, fixed-price service packages with zero hidden fees and clear milestone deliverables.</p>
+                <div class="protocol-chips-row">
+                  <span class="protocol-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Fixed-Price Scope
+                  </span>
+                  <span class="protocol-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Zero Hidden Charges
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="protocol-stream-card">
+              <div class="protocol-node-circle" aria-label="Step 3">03</div>
+              <div class="protocol-card-content">
+                <div class="protocol-card-top">
+                  <span class="protocol-phase-tag">Phase 03 • Documents</span>
+                  <span class="protocol-sla-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Turnaround: Day 2–3
+                  </span>
+                </div>
+                <div class="protocol-title-row">
+                  <div class="protocol-icon-box" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                      <circle cx="12" cy="16" r="1.5"/>
+                    </svg>
+                  </div>
+                  <h3 class="protocol-card-title">Document Collection</h3>
+                </div>
+                <p class="protocol-card-desc">Secure digital upload of identity proofs and utility NOCs directly to our portal with immediate cryptographic hashing.</p>
+                <div class="protocol-chips-row">
+                  <span class="protocol-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Encrypted Vault Upload
+                  </span>
+                  <span class="protocol-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Automated Verification
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="protocol-stream-card">
+              <div class="protocol-node-circle" aria-label="Step 4">04</div>
+              <div class="protocol-card-content">
+                <div class="protocol-card-top">
+                  <span class="protocol-phase-tag">Phase 04 • CS Vetting</span>
+                  <span class="protocol-sla-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Turnaround: Day 3
+                  </span>
+                </div>
+                <div class="protocol-title-row">
+                  <div class="protocol-icon-box" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M12 8v4l3 3"/>
+                    </svg>
+                  </div>
+                  <h3 class="protocol-card-title">Verification</h3>
+                </div>
+                <p class="protocol-card-desc">Rigorous internal vetting by practicing CS/CA to eliminate government query delays and ensure statutory perfection.</p>
+                <div class="protocol-chips-row">
+                  <span class="protocol-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Practicing CS &amp; CA Review
+                  </span>
+                  <span class="protocol-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Zero Query Rejection
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 05 -->
+            <div class="protocol-stream-card">
+              <div class="protocol-node-circle" aria-label="Step 5">05</div>
+              <div class="protocol-card-content">
+                <div class="protocol-card-top">
+                  <span class="protocol-phase-tag">Phase 05 • E-Filing</span>
+                  <span class="protocol-sla-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Turnaround: Day 3–4
+                  </span>
+                </div>
+                <div class="protocol-title-row">
+                  <div class="protocol-icon-box" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                  </div>
+                  <h3 class="protocol-card-title">Application Support</h3>
+                </div>
+                <p class="protocol-card-desc">Digital e-filing with Ministry of Corporate Affairs, GSTN, or Intellectual Property Office with live SRN tracking.</p>
+                <div class="protocol-chips-row">
+                  <span class="protocol-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Direct MCA &amp; GSTN Filing
+                  </span>
+                  <span class="protocol-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Live Tracking Alerts
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 06 -->
+            <div class="protocol-stream-card">
+              <div class="protocol-node-circle" aria-label="Step 6">06</div>
+              <div class="protocol-card-content">
+                <div class="protocol-card-top">
+                  <span class="protocol-phase-tag">Phase 06 • Vault Delivery</span>
+                  <span class="protocol-sla-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Turnaround: Day 4–5
+                  </span>
+                </div>
+                <div class="protocol-title-row">
+                  <div class="protocol-icon-box" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                      <polyline points="9 12 11 14 15 10"/>
+                    </svg>
+                  </div>
+                  <h3 class="protocol-card-title">Completion &amp; Follow-up</h3>
+                </div>
+                <p class="protocol-card-desc">Official certificate delivery to your dashboard vault with ongoing calendar alerts and automated statutory reminders.</p>
+                <div class="protocol-chips-row">
+                  <span class="protocol-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    COI &amp; Vault Delivery
+                  </span>
+                  <span class="protocol-chip">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Statutory Calendar Alerts
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08. SERVICE ENQUIRY CTA (image-35.png) -->
+    <section class="section section-navy" style="position: relative; overflow: hidden;">
+      <div style="position: absolute; inset: 0; opacity: 0.25; mix-blend-mode: overlay;">
+        <img src="images/image-35.png" alt="Luxury Corporate Reception Lounge and Meeting Suites" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 820px;">
+        <div class="eyebrow" style="background: rgba(255,255,255,0.12); color: #FFFFFF; border-color: rgba(255,255,255,0.25);">PERSONALIZED CONSULTATION</div>
+        <h2 style="font-size: clamp(2.2rem, 4vw, 3.4rem); margin-bottom: 1.25rem;">NEED ADVICE ON THE RIGHT STRUCTURE OR FILING?</h2>
+        <p style="font-size: 1.2rem; color: #CBD5E1; margin-bottom: 2.5rem;">
+          Connect with our senior corporate advisory team for a free 20-minute structural review tailored to your commercial plans.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;" class="cta-btn-group">
+          <a href="contact.html#contact-form-section" class="btn btn-primary btn-lg">GET PROFESSIONAL GUIDANCE</a>
+          <a href="pricing.html#comparison-matrix" class="btn btn-outline-white btn-lg">COMPARE PACKAGES</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+                <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #FFFFFF;">
+            <div class="brand-icon-box">
+              <img src="assets/images/logo.svg" alt="Verdant Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-title-wrap">
+              <span class="brand-title" style="color: #FFFFFF;">VERDANT</span>
+              <span class="brand-subtitle" style="color: #60A5FA;">Business Services</span>
+            </div>
+          </a>
+          <p>Professional corporate consulting, legal entity registration, GST services, and annual statutory compliance.</p>
+          <div class="footer-social-links" aria-label="Social media links">
+            <a href="https://linkedin.com" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://twitter.com" class="footer-social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="https://facebook.com" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://youtube.com" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home 1</a>
+            <a href="home-2.html" class="footer-link">Home 2</a>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="services.html" class="footer-link">Services</a>
+            <a href="products.html" class="footer-link">Products</a>
+            <a href="pricing.html" class="footer-link">Pricing</a>
+            <a href="resources.html" class="footer-link">Resources</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <div class="footer-links">
+            <a href="services.html" class="footer-link">Company Registration</a>
+            <a href="services.html" class="footer-link">GST & Taxation</a>
+            <a href="services.html" class="footer-link">Legal Documentation</a>
+            <a href="services.html" class="footer-link">Annual ROC Filing</a>
+            <a href="services.html" class="footer-link">Director KYC</a>
+            <a href="services.html" class="footer-link">Trademark Filing</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Support</h4>
+          <div class="footer-links">
+            <a href="login.html" class="footer-link">Client Login</a>
+            <a href="register.html" class="footer-link">Register Account</a>
+            <a href="dashboard.html" class="footer-link">Client Portal</a>
+            <a href="resources.html" class="footer-link">Knowledgebase & Guides</a>
+            <a href="contact.html" class="footer-link">Helpdesk Support</a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-newsletter-col">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 1rem;">Subscribe to monthly regulatory updates, compliance deadlines, and tax notices.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your business email" required aria-label="Business email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Verdant Business Services Pvt Ltd. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Legal Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Service Detail Modal -->
+  <div class="modal-backdrop" id="serviceModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow" id="modalBadge" style="margin-bottom: 0.25rem;">Service Details</span>
+          <h3 id="modalTitle" style="font-size: 1.35rem;">Service Title</h3>
+        </div>
+        <button class="toggle-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p id="modalDesc" style="margin-bottom: 1.5rem;"></p>
+        <h4 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--color-primary);">Documents Required</h4>
+        <ul id="modalDocsList" style="margin-bottom: 1.5rem; font-size: 0.92rem; color: var(--text-muted); line-height: 1.8;"></ul>
+        <h4 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--color-primary);">Deliverables Included</h4>
+        <ul id="modalDeliverables" style="margin-bottom: 1.5rem; font-size: 0.92rem; color: var(--text-muted); line-height: 1.8;"></ul>
+        <div style="background-color: var(--bg-surface); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light); margin-bottom: 1.5rem;">
+          <strong style="display: block; font-size: 0.88rem; margin-bottom: 0.25rem;">Standard Processing Timeline:</strong>
+          <span id="modalTimeline" style="font-size: 0.9rem; color: var(--text-muted);"></span>
+        </div>
+        <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+          <a href="contact.html" class="btn btn-primary">Enquire For This Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" aria-label="Scroll to top of page">↑</button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactions.js"></script>
+</body>
+</html>
+

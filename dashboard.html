@@ -1,0 +1,2267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal Dashboard | Verdant Business Services</title>
+  <meta name="description" content="Manage your entity registration, upload compliance documentation, track ROC filings, and inspect your statutory calendar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <script src="assets/js/theme.js"></script>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="alternate icon" type="image/png" href="assets/images/website-logo.png">
+</head>
+<body class="dashboard-layout">
+
+  <!-- DASHBOARD LEFT SIDEBAR (No Public Navbar) -->
+  <aside class="dash-sidebar" id="dashSidebar">
+    <div class="dash-brand-wrap">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-box" style="width: 44px; height: 38px;">
+          <img src="assets/images/logo.svg" alt="Verdant Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-title" style="font-size: 1.05rem;">VERDANT</span>
+          <span class="brand-subtitle" style="font-size: 0.65rem;">Client Portal</span>
+        </div>
+      </a>
+      <button class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close sidebar menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- User Profile Badge inside Sidebar (for Mobile & 768px Tab View) -->
+    <div class="dash-sidebar-user" id="dashSidebarUser" title="View Profile & Settings">
+      <div class="user-avatar-mini sidebar-user-avatar">AW</div>
+      <div class="dash-sidebar-user-info">
+        <span class="user-name-text sidebar-user-name">Alexander Wright</span>
+        <span class="dash-sidebar-user-biz sidebar-user-biz">Apex Dynamics Pvt Ltd</span>
+      </div>
+    </div>
+
+    <nav class="dash-nav" aria-label="Client Dashboard Internal Navigation">
+      <div class="dash-nav-item active" data-tab="overview">
+        <span class="dash-nav-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+        <span class="nav-label">Overview</span>
+      </div>
+
+      <div class="dash-nav-item" data-tab="applications">
+        <span class="dash-nav-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span>
+        <span class="nav-label">My Applications</span>
+        <span class="dash-nav-badge">2</span>
+      </div>
+
+      <div class="dash-nav-item" data-tab="documents">
+        <span class="dash-nav-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+        <span class="nav-label">Document Centre</span>
+      </div>
+
+      <div class="dash-nav-item" data-tab="tracker">
+        <span class="dash-nav-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+        <span class="nav-label">Registration Tracker</span>
+      </div>
+
+      <div class="dash-nav-item" data-tab="calendar">
+        <span class="dash-nav-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+        <span class="nav-label">Compliance Calendar</span>
+        <span class="dash-nav-badge" style="background-color: #F59E0B;">3</span>
+      </div>
+
+      <div class="dash-nav-item" data-tab="services">
+        <span class="dash-nav-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+        <span class="nav-label">My Services</span>
+      </div>
+
+      <div class="dash-nav-item" data-tab="payments">
+        <span class="dash-nav-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span>
+        <span class="nav-label">Payments & Invoices</span>
+      </div>
+
+      <div class="dash-nav-item" data-tab="certificates">
+        <span class="dash-nav-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span>
+        <span class="nav-label">Certificates & Downloads</span>
+      </div>
+
+      <div class="dash-nav-item" data-tab="notifications">
+        <span class="dash-nav-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>
+        <span class="nav-label">Notifications</span>
+        <span class="dash-nav-badge" style="background-color: var(--color-primary-light);">2</span>
+      </div>
+
+      <div class="dash-nav-item" data-tab="settings">
+        <span class="dash-nav-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
+        <span class="nav-label">Profile & Settings</span>
+      </div>
+    </nav>
+
+    <div class="dash-sidebar-footer">
+      <div class="dash-sidebar-toggles">
+        <button class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme" title="Toggle Light / Dark Theme"></button>
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Right to Left / Left to Right">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16M16 3l4 4-4 4"/>
+            <path d="M20 17H4M8 21l-4-4 4-4"/>
+          </svg>
+        </button>
+      </div>
+      <button class="btn btn-secondary btn-sm" id="dashLogoutBtn" style="color: #EF4444 !important; border-color: rgba(239, 68, 68, 0.3); width: 100%;">
+        Logout
+      </button>
+    </div>
+  </aside>
+
+  <!-- DASHBOARD MAIN WORKSPACE -->
+  <div class="dash-main">
+    <!-- Top Dashboard Toolbar -->
+    <header class="dash-toolbar">
+      <div class="dash-toolbar-left">
+        <button class="dash-mobile-toggle" id="dashMobileToggle" aria-label="Open sidebar menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <h2 class="dash-page-title" id="dashPageTitle">Overview</h2>
+      </div>
+
+      <div class="dash-toolbar-right">
+        <div class="user-badge-profile">
+          <div class="user-avatar-mini" id="userInitials">AW</div>
+          <div style="display: flex; flex-direction: column;">
+            <span class="user-name-text" id="userNameDisplay">Alexander Wright</span>
+            <span style="font-size: 0.72rem; color: var(--text-muted);" id="userBusinessDisplay">Apex Dynamics Pvt Ltd</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Workspace Container -->
+    <div class="dash-workspace">
+
+      <!-- ======================================================================
+           01. OVERVIEW PANE (EXACT 4 SECTIONS)
+           ====================================================================== -->
+      <section class="dash-pane active" id="tab-overview">
+        <!-- SECTION 01: Executive Summary Banner -->
+        <div class="dash-section">
+          <div class="dash-banner-card">
+            <div>
+              <span class="eyebrow" style="font-size: 0.75rem; margin-bottom: 0.25rem;">Real-Time Corporate Status</span>
+              <h2 id="welcomeHeading" style="font-size: 1.75rem; margin-bottom: 0.35rem;">WELCOME BACK, ALEXANDER WRIGHT.</h2>
+              <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0;">Entity CIN: <strong>U72900KA2026PTC184920</strong> | Assigned CS: <strong>Priya Sharma (FCS 10429)</strong></p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <span class="status-pill success"><span class="pill-dot"></span>Active Entity (Good Standing)</span>
+              <span class="status-pill info">ROC Karnataka</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 02: Core KPI Metrics (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">02</span> Key Compliance & Registration Metrics</h3>
+            <span style="font-size: 0.82rem; color: var(--text-muted);">Updated 10 mins ago</span>
+          </div>
+          <div class="dash-metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+              <div class="metric-data">
+                <h4>Active Applications</h4>
+                <div class="metric-val">02</div>
+                <span style="font-size: 0.78rem; color: var(--color-primary); font-weight: 600;">1 Name Approved | 1 SPICe+</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <div class="metric-data">
+                <h4>Completed Registrations</h4>
+                <div class="metric-val">04</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">COI, PAN, TAN & GSTIN</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div class="metric-data">
+                <h4>Pending Documents</h4>
+                <div class="metric-val">01</div>
+                <span style="font-size: 0.78rem; color: #F59E0B; font-weight: 600;">Director Address Utility Bill</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+              <div class="metric-data">
+                <h4>Upcoming Tasks</h4>
+                <div class="metric-val">03</div>
+                <span style="font-size: 0.78rem; color: #0284C7; font-weight: 600;">Within next 30 days</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 03: Recent Statutory Filing Audit Log -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">03</span> Recent Statutory Filing Activities</h3>
+            <span class="status-pill info">Automated MCA Audit Log</span>
+          </div>
+          <div class="dash-card">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; gap: 1rem; align-items: center; padding-bottom: 0.85rem; border-bottom: 1px solid var(--border-light);">
+                <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); color: #10B981; display: flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div>
+                  <h4 style="font-size: 0.95rem; margin-bottom: 0.2rem;">Certificate of Incorporation Issued by MCA</h4>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">Apex Dynamics Technologies Pvt Ltd | CIN: U72900KA2026PTC184920</span>
+                </div>
+                <span style="margin-left: auto; font-size: 0.75rem; color: var(--text-muted);">Yesterday</span>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: center; padding-bottom: 0.85rem; border-bottom: 1px solid var(--border-light);">
+                <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(2, 132, 199, 0.15); color: #0284C7; display: flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <div>
+                  <h4 style="font-size: 0.95rem; margin-bottom: 0.2rem;">Draft e-MoA and e-AoA Approved by Practicing CS</h4>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">Main object clauses verified against Table A guidelines</span>
+                </div>
+                <span style="margin-left: auto; font-size: 0.75rem; color: var(--text-muted);">3 Days ago</span>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: center; padding-bottom: 0.85rem; border-bottom: 1px solid var(--border-light);">
+                <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(59, 130, 246, 0.15); color: var(--color-primary); display: flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
+                <div>
+                  <h4 style="font-size: 0.95rem; margin-bottom: 0.2rem;">Form TM-A Trademark Filing Acknowledged</h4>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">Class 42 Software & SaaS Brand Registration Application No 5894022</span>
+                </div>
+                <span style="margin-left: auto; font-size: 0.75rem; color: var(--text-muted);">4 Days ago</span>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: center;">
+                <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(245, 158, 11, 0.15); color: #F59E0B; display: flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                <div>
+                  <h4 style="font-size: 0.95rem; margin-bottom: 0.2rem;">Action Required: Director 2 Address Proof Resubmission</h4>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">Bank statement date must be within 2 months of filing date</span>
+                </div>
+                <span style="margin-left: auto; font-size: 0.75rem; color: var(--text-muted);">5 Days ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 04: Priority Quick Actions (4 Action Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">04</span> Priority Operations & One-Click Workflows</h3>
+            <p class="dash-section-desc">Quickly execute essential incorporation and secretarial actions.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card" onclick="document.querySelector('.dash-nav-item[data-tab=\'documents\']').click()" style="cursor: pointer;">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Upload KYC Documents</h4>
+                  <p class="dash-info-desc">Submit pending electricity bill or passport scans to the cloud vault.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span style="color: var(--color-primary); font-weight: 600;">Go to Documents →</span>
+                <span class="status-pill warning" style="font-size: 0.7rem;">1 Pending</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card" onclick="document.querySelector('.dash-nav-item[data-tab=\'tracker\']').click()" style="cursor: pointer;">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Track Application Live</h4>
+                  <p class="dash-info-desc">Monitor real-time CRC government scrutiny and approval progress.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span style="color: var(--color-primary); font-weight: 600;">View Tracker →</span>
+                <span class="status-pill success" style="font-size: 0.7rem;">100% Done</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card" onclick="document.querySelector('.dash-nav-item[data-tab=\'certificates\']').click()" style="cursor: pointer;">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Download Incorporation COI</h4>
+                  <p class="dash-info-desc">Obtain digitally signed Certificate of Incorporation, e-MoA & e-AoA.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span style="color: var(--color-primary); font-weight: 600;">Open Vault →</span>
+                <span class="status-pill info" style="font-size: 0.7rem;">4 Ready</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card" onclick="document.querySelector('.dash-nav-item[data-tab=\'calendar\']').click()" style="cursor: pointer;">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">View Compliance Dates</h4>
+                  <p class="dash-info-desc">Inspect statutory due dates for GST returns, ROC INC-20A & advance taxes.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span style="color: var(--color-primary); font-weight: 600;">View Calendar →</span>
+                <span class="status-pill warning" style="font-size: 0.7rem;">Due in 5d</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           02. MY APPLICATIONS PANE (EXACT 4 SECTIONS)
+           ====================================================================== -->
+      <section class="dash-pane" id="tab-applications">
+        <!-- SECTION 01: Application Pipeline Metrics (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <div>
+              <h3 class="dash-section-title"><span class="section-num">01</span> Application Pipeline Summary</h3>
+              <p class="dash-section-desc">Real-time status of all corporate incorporation and statutory registration filings.</p>
+            </div>
+          </div>
+          <div class="dash-metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 12h6M9 16h6"/></svg></div>
+              <div class="metric-data">
+                <h4>Total Applications</h4>
+                <div class="metric-val">04</div>
+                <span style="font-size: 0.78rem; color: var(--color-primary); font-weight: 600;">Across all authorities</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div class="metric-data">
+                <h4>Government In-Review</h4>
+                <div class="metric-val">02</div>
+                <span style="font-size: 0.78rem; color: #0284C7; font-weight: 600;">GSTIN & Trademark TM-A</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <div class="metric-data">
+                <h4>Approved & Issued</h4>
+                <div class="metric-val">01</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">COI Allotted (CIN Issued)</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+              <div class="metric-data">
+                <h4>Action Required</h4>
+                <div class="metric-val">01</div>
+                <span style="font-size: 0.78rem; color: #F59E0B; font-weight: 600;">Director KYC Utility Proof</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 02: Primary Statutory Applications Table -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <div>
+              <h3 class="dash-section-title"><span class="section-num">02</span> My Registration & Statutory Applications</h3>
+              <p class="dash-section-desc">Searchable database of active MCA SPICe+, GSTIN, and intellectual property applications.</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <input type="text" id="appSearchInput" class="form-control" placeholder="Search applications..." style="width: 220px; padding: 0.5rem 0.85rem; font-size: 0.88rem;">
+              <select id="appStatusFilter" class="form-control" style="width: 150px; padding: 0.5rem 0.85rem; font-size: 0.88rem;">
+                <option value="all">All Statuses</option>
+                <option value="approved">Approved</option>
+                <option value="in progress">In Progress</option>
+                <option value="review">Action Required</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="dash-card" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="dash-table" id="applicationsTable">
+                <thead>
+                  <tr>
+                    <th>Application ID</th>
+                    <th>Business Entity</th>
+                    <th>Registration Type</th>
+                    <th>Submitted Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>#VER-2026-8812</strong></td>
+                    <td>Apex Dynamics Technologies</td>
+                    <td>Private Limited Company</td>
+                    <td>2026-02-10</td>
+                    <td><span class="status-pill success"><span class="pill-dot"></span>Approved (COI Issued)</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Viewing Application #VER-2026-8812 details: Private Limited Company. Certificate of Incorporation CIN U72900KA2026PTC184920 allotted.')">View Details</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#VER-2026-9045</strong></td>
+                    <td>Apex Cloud Infrastructure</td>
+                    <td>Goods & Services Tax (GSTIN)</td>
+                    <td>2026-02-14</td>
+                    <td><span class="status-pill info"><span class="pill-dot"></span>In Progress (Department Scrutiny)</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Viewing Application #VER-2026-9045 details: ARN generated. Awaiting jurisdictional tax officer approval.')">View Details</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#VER-2026-9210</strong></td>
+                    <td>Apex Shield Logistics</td>
+                    <td>Limited Liability Partnership</td>
+                    <td>2026-02-18</td>
+                    <td><span class="status-pill warning"><span class="pill-dot"></span>Action Required (KYC Resubmission)</span></td>
+                    <td><button class="btn btn-primary btn-sm" onclick="alert('Viewing Application #VER-2026-9210: Please re-upload Partner 2 electricity bill dated within 60 days.')">Fix Issue</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#VER-2026-9400</strong></td>
+                    <td>Apex Dynamics Brand Logo</td>
+                    <td>Trademark Registration (Class 42)</td>
+                    <td>2026-02-22</td>
+                    <td><span class="status-pill info"><span class="pill-dot"></span>Form TM-A Filed (TM Issued)</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Viewing Trademark #VER-2026-9400: Application No 5894022 acknowledged by Trade Marks Registry.')">View Details</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 03: Government Authority Submission Records (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">03</span> Regulatory Authority Filing Gateways</h3>
+            <p class="dash-section-desc">Current portal status across central and state regulatory bodies.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">MCA CRC Manesar</h4>
+                  <p class="dash-info-desc">SPICe+ Part A & Part B Central Registration Centre scrutinization.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">COI Generated</span>
+                <span style="color: var(--text-muted);">CIN Allotted</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">CBIC GST Portal</h4>
+                  <p class="dash-info-desc">Aadhaar biometric authentication and state tax jurisdiction verification.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill info">Under Officer Review</span>
+                <span style="color: var(--text-muted);">ARN Active</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">IP India (CGPDTM)</h4>
+                  <p class="dash-info-desc">Trademark Registry formalities check pass for Class 42 SaaS trademark.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 9h6M12 9v6"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill info">Form TM-A Passed</span>
+                <span style="color: var(--text-muted);">Exam Pending</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Income Tax (PAN/TAN)</h4>
+                  <p class="dash-info-desc">Permanent Account Number & Tax Deduction Account Number issuance.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Active & Valid</span>
+                <span style="color: var(--text-muted);">PAN Allotted</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 04: Dedicated Advisory Support & SLA (2-Column Grid) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">04</span> Assigned Secretarial Advisory Liaison</h3>
+            <p class="dash-section-desc">Direct corporate consulting contact for application questions and resubmissions.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;" class="grid-2">
+            <div class="dash-card" style="display: flex; gap: 1.25rem; align-items: center;">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--color-ice-blue); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; flex-shrink: 0;">PS</div>
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">CS Priya Sharma</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Senior Company Secretary | Fellow Member ICSI (FCS 10429)</p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <button class="btn btn-primary btn-sm" onclick="alert('Calling assigned Company Secretary: +91 80 4567 8901 (Ext 204)')">Call Advisor</button>
+                  <button class="btn btn-secondary btn-sm" onclick="alert('Opening direct secretarial advisory query box.')">Send Message</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Statutory SLA Commitment</h4>
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0;">All queries and ROC resubmissions are guaranteed to be reviewed and certified within <strong>4 business hours</strong> by our in-house practicing secretarial board.</p>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--border-light); font-size: 0.82rem;">
+                <span class="status-pill success">SLA Compliance: 99.8%</span>
+                <span style="color: var(--text-muted);">Hours: Mon - Sat 9:00 AM - 7:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           03. DOCUMENT CENTRE PANE (EXACT 4 SECTIONS)
+           ====================================================================== -->
+      <section class="dash-pane" id="tab-documents">
+        <!-- SECTION 01: Vault Statistics (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <div>
+              <h3 class="dash-section-title"><span class="section-num">01</span> Digital Vault & Storage Health</h3>
+              <p class="dash-section-desc">Encryption standards, document verification ratios, and allocated cloud vault capacity.</p>
+            </div>
+          </div>
+          <div class="dash-metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+              <div class="metric-data">
+                <h4>Total Uploads</h4>
+                <div class="metric-val">12</div>
+                <span style="font-size: 0.78rem; color: var(--color-primary); font-weight: 600;">Across KYC & charters</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <div class="metric-data">
+                <h4>CS Verified</h4>
+                <div class="metric-val">09</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">Stamped & ROC ready</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+              <div class="metric-data">
+                <h4>Action Needed</h4>
+                <div class="metric-val">01</div>
+                <span style="font-size: 0.78rem; color: #F59E0B; font-weight: 600;">Bank statement > 60d</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+              <div class="metric-data">
+                <h4>Vault Storage</h4>
+                <div class="metric-val">14.2</div>
+                <span style="font-size: 0.78rem; color: #0284C7; font-weight: 600;">MB used of 100 MB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 02: Interactive Upload Dropzone -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">02</span> Secure Document Upload Vault</h3>
+            <span class="status-pill info">256-Bit Encrypted Cloud Storage</span>
+          </div>
+          <div class="upload-dropzone" id="docDropzone">
+            <div class="upload-icon" style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Click or Drag & Drop Documents Here to Upload</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">Supports PDF, JPEG, PNG (Max 10MB per file). High-resolution color scans ensure prompt ROC approvals.</p>
+            <button type="button" class="btn btn-primary btn-sm">Select Files From Device</button>
+            <input type="file" id="docFileInput" style="display: none;" multiple accept=".pdf,.png,.jpg,.jpeg">
+          </div>
+        </div>
+
+        <!-- SECTION 03: Verified Documents Repository Table -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">03</span> Submitted & Verified Documents Repository</h3>
+            <span style="font-size: 0.82rem; color: var(--text-muted);">Official statutory repository records</span>
+          </div>
+          <div class="dash-card" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="dash-table" id="uploadedDocsTable">
+                <thead>
+                  <tr>
+                    <th>Document Name</th>
+                    <th>Category</th>
+                    <th>File Size</th>
+                    <th>Uploaded Date</th>
+                    <th>Verification Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Director_1_PAN_Card.pdf</strong></td>
+                    <td>Identity Proof</td>
+                    <td>840 KB</td>
+                    <td>2026-02-08</td>
+                    <td><span class="status-pill success"><span class="pill-dot"></span>Verified by CS</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Viewing simulated file: Director_1_PAN_Card.pdf')">Preview</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Registered_Office_Electricity_Bill.pdf</strong></td>
+                    <td>Address Proof</td>
+                    <td>1.2 MB</td>
+                    <td>2026-02-08</td>
+                    <td><span class="status-pill success"><span class="pill-dot"></span>Verified by CS</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Viewing simulated file: Registered_Office_Electricity_Bill.pdf')">Preview</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Owner_NOC_Premises_Affidavit.pdf</strong></td>
+                    <td>Business Details</td>
+                    <td>620 KB</td>
+                    <td>2026-02-09</td>
+                    <td><span class="status-pill success"><span class="pill-dot"></span>Verified by CS</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Viewing simulated file: Owner_NOC_Premises_Affidavit.pdf')">Preview</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Director_2_Bank_Statement.pdf</strong></td>
+                    <td>Director Documents</td>
+                    <td>2.1 MB</td>
+                    <td>2026-02-15</td>
+                    <td><span class="status-pill warning"><span class="pill-dot"></span>Resubmission Required (Older than 2 mos)</span></td>
+                    <td><button class="btn btn-primary btn-sm" onclick="document.querySelector('#docFileInput').click()">Re-upload</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 04: Document Compliance Guidelines (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">04</span> MCA & ROC Document Compliance Checklist</h3>
+            <p class="dash-section-desc">Ensure your submitted documents meet strict Ministry of Corporate Affairs standards.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Identity Proof Standards</h4>
+                  <p class="dash-info-desc">Color scan of PAN is mandatory. Name and DOB must match Aadhaar & MCA records exactly.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="8" cy="11" r="3"/><line x1="14" y1="9" x2="18" y2="9"/><line x1="14" y1="13" x2="18" y2="13"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Verified Active</span>
+                <span style="color: var(--text-muted);">Director 1 & 2</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Address Proof Freshness</h4>
+                  <p class="dash-info-desc">Bank statement or utility bill must not be older than 2 months (60 days) from submission date.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill warning">Resubmit Dir 2</span>
+                <span style="color: var(--text-muted);">Bank Statement</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Registered Office Proof</h4>
+                  <p class="dash-info-desc">Electricity/Gas bill in landlord's name accompanied by a signed No Objection Certificate (NOC).</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="9" y1="6" x2="9.01" y2="6"/><line x1="15" y1="6" x2="15.01" y2="6"/><line x1="9" y1="10" x2="9.01" y2="10"/><line x1="15" y1="10" x2="15.01" y2="10"/><line x1="9" y1="14" x2="9.01" y2="14"/><line x1="15" y1="14" x2="15.01" y2="14"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">ROC Verified</span>
+                <span style="color: var(--text-muted);">Bangalore Office</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">DSC Class 3 Token</h4>
+                  <p class="dash-info-desc">Digital signature certificates for all proposed directors must be actively installed for e-signing.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-1.5 1.5L16 7l-1.5-1.5m-1.5 1.5L11 9m-1.5 1.5L8 12m-6 6a5.5 5.5 0 1 1 7.78-7.78L22 2v4h-4v4h-4v4h-2.22A5.5 5.5 0 0 1 2 18z"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Both DSCs Active</span>
+                <span style="color: var(--text-muted);">Expires 2028</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           04. REGISTRATION TRACKER PANE (EXACT 4 SECTIONS)
+           ====================================================================== -->
+      <section class="dash-pane" id="tab-tracker">
+        <!-- SECTION 01: Live Incorporation Stage Summary (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <div>
+              <h3 class="dash-section-title"><span class="section-num">01</span> Application Velocity & Status Overview</h3>
+              <p class="dash-section-desc">Application Reference: <strong>#VER-2026-8812</strong> (Apex Dynamics Technologies Pvt Ltd)</p>
+            </div>
+            <span class="status-pill success" style="font-size: 0.85rem;">Overall Progress: 100% Completed</span>
+          </div>
+          <div class="dash-metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="9" y1="6" x2="9.01" y2="6"/><line x1="15" y1="6" x2="15.01" y2="6"/><line x1="9" y1="10" x2="9.01" y2="10"/><line x1="15" y1="10" x2="15.01" y2="10"/><line x1="9" y1="14" x2="9.01" y2="14"/><line x1="15" y1="14" x2="15.01" y2="14"/></svg></div>
+              <div class="metric-data">
+                <h4>Active Entity</h4>
+                <div class="metric-val" style="font-size: 1.45rem;">Pvt Ltd</div>
+                <span style="font-size: 0.78rem; color: var(--color-primary); font-weight: 600;">CIN: U72900KA2026PTC184920</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <div class="metric-data">
+                <h4>Current Phase</h4>
+                <div class="metric-val" style="font-size: 1.45rem;">Phase 6/6</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">CRC Manesar Approved</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+              <div class="metric-data">
+                <h4>Turnaround Time</h4>
+                <div class="metric-val">4 Days</div>
+                <span style="font-size: 0.78rem; color: #0284C7; font-weight: 600;">48h faster than national avg</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div class="metric-data">
+                <h4>Next Milestone</h4>
+                <div class="metric-val" style="font-size: 1.45rem;">INC-20A</div>
+                <span style="font-size: 0.78rem; color: #F59E0B; font-weight: 600;">Commencement of Business</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 02: 6-Step Visual Milestone Stepper -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">02</span> Statutory Incorporation Stepper</h3>
+            <p class="dash-section-desc">Track step-by-step progress from RUN name approval to certificate delivery.</p>
+          </div>
+          <div class="dash-card">
+            <div class="tracker-stepper">
+              <div class="tracker-step-item completed">
+                <div class="tracker-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <strong style="font-size: 0.85rem; margin-bottom: 2px;">01. Initiated</strong>
+                <span style="font-size: 0.72rem; color: var(--text-muted);">Fee Paid</span>
+              </div>
+
+              <div class="tracker-step-item completed">
+                <div class="tracker-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <strong style="font-size: 0.85rem; margin-bottom: 2px;">02. Info Submitted</strong>
+                <span style="font-size: 0.72rem; color: var(--text-muted);">Promoter KYC</span>
+              </div>
+
+              <div class="tracker-step-item completed">
+                <div class="tracker-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <strong style="font-size: 0.85rem; margin-bottom: 2px;">03. Docs Received</strong>
+                <span style="font-size: 0.72rem; color: var(--text-muted);">NOC & Bills</span>
+              </div>
+
+              <div class="tracker-step-item completed">
+                <div class="tracker-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <strong style="font-size: 0.85rem; margin-bottom: 2px;">04. Document Review</strong>
+                <span style="font-size: 0.72rem; color: var(--text-muted);">CS Verified</span>
+              </div>
+
+              <div class="tracker-step-item completed">
+                <div class="tracker-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <strong style="font-size: 0.85rem; margin-bottom: 2px;">05. MCA Processing</strong>
+                <span style="font-size: 0.72rem; color: var(--text-muted);">CRC Approved</span>
+              </div>
+
+              <div class="tracker-step-item completed">
+                <div class="tracker-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <strong style="font-size: 0.85rem; margin-bottom: 2px;">06. Registered</strong>
+                <span style="font-size: 0.72rem; color: #10B981; font-weight: 700;">COI Delivered</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 03: Authority Milestone Timestamp Audit Trail (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">03</span> Ministry of Corporate Affairs Audit Milestones</h3>
+            <span class="status-pill info">Official MCA Timestamps</span>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">RUN Name Approval</h4>
+                  <p class="dash-info-desc">Proposed name "Apex Dynamics Technologies" granted without MCA objection.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 9h6M12 9v6"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">ROC-BLR-092</span>
+                <span style="color: var(--text-muted);">Feb 10, 2026</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">SPICe+ Part B Filing</h4>
+                  <p class="dash-info-desc">Integrated form filed along with AGILE-PRO-S, e-MoA & e-AoA charters.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Challan Paid</span>
+                <span style="color: var(--text-muted);">Feb 11, 2026</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">DIN & PAN/TAN Generated</h4>
+                  <p class="dash-info-desc">Director Identification Numbers (DIN 09841200, 09841201) and PAN issued.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Allotted</span>
+                <span style="color: var(--text-muted);">Feb 13, 2026</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">COI Allotment Complete</h4>
+                  <p class="dash-info-desc">ROC Registrar digitally signed & dispatched incorporation charter.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">CIN Allotted</span>
+                <span style="color: var(--text-muted);">Feb 14, 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 04: Incorporation Kit Deliverables & Next Steps (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">04</span> Incorporation Kit Deliverables & Action Items</h3>
+            <p class="dash-section-desc">Download legal founding documents and complete initial regulatory actions.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Certificate of Incorporation</h4>
+                  <p class="dash-info-desc">Official signed government charter with CIN & corporate seal.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-primary btn-sm btn-block" onclick="alert('Downloading Certificate of Incorporation (COI.pdf)')">Download COI</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Certified e-MoA & e-AoA</h4>
+                  <p class="dash-info-desc">Table A company charter and internal governance articles.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Downloading Certified e-MoA & e-AoA (PDF bundle)')">Download Charters</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Bank Account Resolution</h4>
+                  <p class="dash-info-desc">Certified board resolution extract for opening corporate current account.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Downloading Certified Board Resolution Extract for Bank Opening')">Download Resolution</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">File Form INC-20A</h4>
+                  <p class="dash-info-desc">Mandatory statutory declaration of capital deposit within 180 days.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="document.querySelector('.dash-nav-item[data-tab=\'calendar\']').click()">Schedule Filing</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           05. COMPLIANCE CALENDAR PANE (EXACT 4 SECTIONS)
+           ====================================================================== -->
+      <section class="dash-pane" id="tab-calendar">
+        <!-- SECTION 01: Compliance Readiness Score (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <div>
+              <h3 class="dash-section-title"><span class="section-num">01</span> Statutory Health & Risk Assessment</h3>
+              <p class="dash-section-desc">Real-time statutory calendar tracking for GST returns, ROC filings, and income tax dates.</p>
+            </div>
+          </div>
+          <div class="dash-metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div class="metric-data">
+                <h4>Next Due Date</h4>
+                <div class="metric-val" style="font-size: 1.5rem;">5 Days</div>
+                <span style="font-size: 0.78rem; color: #F59E0B; font-weight: 600;">GSTR-3B Monthly Return</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+              <div class="metric-data">
+                <h4>Due in 30 Days</h4>
+                <div class="metric-val">03</div>
+                <span style="font-size: 0.78rem; color: #0284C7; font-weight: 600;">GST, Advance Tax, INC-20A</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <div class="metric-data">
+                <h4>Filing Accuracy</h4>
+                <div class="metric-val">100%</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">Zero missed deadlines</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div class="metric-data">
+                <h4>Penalty Risk</h4>
+                <div class="metric-val">₹0</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">No statutory late fees</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 02: Category Filters & Legend -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <div>
+              <h3 class="dash-section-title"><span class="section-num">02</span> Statutory Compliance Categories</h3>
+              <p class="dash-section-desc">Filter filing events by regulatory jurisdiction.</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button class="btn btn-primary btn-sm cal-filter-btn" data-cal-filter="all">All Deadlines</button>
+              <button class="btn btn-secondary btn-sm cal-filter-btn" data-cal-filter="gst">GST</button>
+              <button class="btn btn-secondary btn-sm cal-filter-btn" data-cal-filter="roc">ROC Secretarial</button>
+              <button class="btn btn-secondary btn-sm cal-filter-btn" data-cal-filter="tax">Income Tax</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 03: Scheduled Statutory Filings Feed (4 Event Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">03</span> Upcoming Statutory Filing Deadlines</h3>
+            <span class="status-pill info">Automated CA Reconciliation</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="cal-event-card" data-category="gst" style="display: flex; align-items: center; justify-content: space-between; padding: 1.25rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border-left: 4px solid var(--color-primary); border: 1px solid var(--border-card); border-left-width: 4px;">
+              <div>
+                <span class="status-pill info" style="font-size: 0.72rem; margin-bottom: 0.35rem;">GSTIN Return</span>
+                <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem;">GSTR-3B Monthly Return & Tax Settlement</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;" title="Statutory due date: 20th of every month | Apex Dynamics Technologies Pvt Ltd">Statutory due date: 20th of every month | Apex Dynamics Technologies Pvt Ltd</p>
+              </div>
+              <span class="status-pill warning">Due in 5 Days</span>
+            </div>
+
+            <div class="cal-event-card" data-category="roc" style="display: flex; align-items: center; justify-content: space-between; padding: 1.25rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border-left: 4px solid #10B981; border: 1px solid var(--border-card); border-left-width: 4px;">
+              <div>
+                <span class="status-pill success" style="font-size: 0.72rem; margin-bottom: 0.35rem;">MCA Secretarial</span>
+                <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem;">Declaration of Commencement of Business (Form INC-20A)</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;" title="Mandatory within 180 days of incorporation | Bank deposit verification">Mandatory within 180 days of incorporation | Bank deposit verification</p>
+              </div>
+              <span class="status-pill info">Scheduled for Filing</span>
+            </div>
+
+            <div class="cal-event-card" data-category="roc" style="display: flex; align-items: center; justify-content: space-between; padding: 1.25rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border-left: 4px solid #F59E0B; border: 1px solid var(--border-card); border-left-width: 4px;">
+              <div>
+                <span class="status-pill warning" style="font-size: 0.72rem; margin-bottom: 0.35rem;">Director Credentials</span>
+                <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem;">Annual Director KYC (DIR-3 KYC Web)</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;" title="Required for all active DIN holders by September 30th">Required for all active DIN holders by September 30th</p>
+              </div>
+              <span class="status-pill success">Verified in Vault</span>
+            </div>
+
+            <div class="cal-event-card" data-category="tax" style="display: flex; align-items: center; justify-content: space-between; padding: 1.25rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border-left: 4px solid #0284C7; border: 1px solid var(--border-card); border-left-width: 4px;">
+              <div>
+                <span class="status-pill info" style="font-size: 0.72rem; margin-bottom: 0.35rem;">Direct Taxes</span>
+                <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem;">Q4 Advance Tax Installment Calculation</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;" title="Statutory deadline: 15th March | Chartered Accountant Review">Statutory deadline: 15th March | Chartered Accountant Review</p>
+              </div>
+              <span class="status-pill warning">Review Pending</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 04: Regulatory Risk Prevention & Reminders (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">04</span> Regulatory Penalty Protection Advisory</h3>
+            <p class="dash-section-desc">Key legal provisions to maintain your company in continuous good standing.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">MCA Late Filing Shield</h4>
+                  <p class="dash-info-desc">Prevents ₹100/day cumulative additional statutory penalties on ROC forms.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Protected</span>
+                <span style="color: var(--text-muted);">Auto-Filing</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">GST 2B Reconciliation</h4>
+                  <p class="dash-info-desc">Ensures 100% accurate Input Tax Credit claiming prior to monthly 20th deadline.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill info">Reconciled</span>
+                <span style="color: var(--text-muted);">Feb 2026</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Multi-Channel Alerts</h4>
+                  <p class="dash-info-desc">Automated alerts via WhatsApp, Email, and SMS 15, 7, and 2 days before due dates.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Enabled</span>
+                <span style="color: var(--text-muted);">3 Channels</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Secretarial Retainer</h4>
+                  <p class="dash-info-desc">Dedicated practicing CS manages all board minutes, AGM notices, and registers.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">CS Assigned</span>
+                <span style="color: var(--text-muted);">Year 1 Retainer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           06. MY SERVICES PANE (EXACT 4 SECTIONS)
+           ====================================================================== -->
+      <section class="dash-pane" id="tab-services">
+        <!-- SECTION 01: Service Portfolio Summary (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <div>
+              <h3 class="dash-section-title"><span class="section-num">01</span> Corporate Services Portfolio</h3>
+              <p class="dash-section-desc">Active consulting agreements, secretarial retainers, and assigned legal advisors.</p>
+            </div>
+            <a href="products.html" class="btn btn-primary btn-sm">+ Add New Corporate Service</a>
+          </div>
+          <div class="dash-metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+              <div class="metric-data">
+                <h4>Active Retainers</h4>
+                <div class="metric-val">03</div>
+                <span style="font-size: 0.78rem; color: var(--color-primary); font-weight: 600;">Incorporation, Secretarial, GST</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div class="metric-data">
+                <h4>Compliance Tier</h4>
+                <div class="metric-val" style="font-size: 1.45rem;">Annual Tier 1</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">360° Corporate Coverage</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <div class="metric-data">
+                <h4>Assigned Advisors</h4>
+                <div class="metric-val">02</div>
+                <span style="font-size: 0.78rem; color: #0284C7; font-weight: 600;">1 CS Lead | 1 CA Lead</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div class="metric-data">
+                <h4>Advisory Credits</h4>
+                <div class="metric-val">04 Hrs</div>
+                <span style="font-size: 0.78rem; color: #F59E0B; font-weight: 600;">Complimentary 1-on-1 calls</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 02: Active Services Table -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">02</span> Active Services & Ongoing Retainers</h3>
+            <span style="font-size: 0.82rem; color: var(--text-muted);">Current contract milestones</span>
+          </div>
+          <div class="dash-card" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Service Package</th>
+                    <th>Application Ref</th>
+                    <th>Assigned Advisor</th>
+                    <th>Renewal / Due Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Startup Launch Suite (Pvt Ltd)</strong></td>
+                    <td>#VER-2026-8812</td>
+                    <td>CS Priya Sharma</td>
+                    <td>Completed</td>
+                    <td><span class="status-pill success">Active Entity</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Viewing Startup Launch Suite deliverables.')">View Scope</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Annual Secretarial Retainer (Year 1)</strong></td>
+                    <td>#RET-2026-104</td>
+                    <td>CS Ramanathan Iyer</td>
+                    <td>2027-02-10</td>
+                    <td><span class="status-pill info">Ongoing Retainer</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Viewing Annual Secretarial Retainer calendar and filings.')">Manage</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Monthly GST Return Service</strong></td>
+                    <td>#TAX-2026-559</td>
+                    <td>CA Rajesh Kumar</td>
+                    <td>Monthly 20th</td>
+                    <td><span class="status-pill info">Monthly Retainer</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Viewing GST reconciliation worksheets.')">Manage</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 03: Dedicated Advisory Team (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">03</span> Dedicated Advisory & Legal Counsel Team</h3>
+            <p class="dash-section-desc">Certified professionals managing your company's filings and legal documentation.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">CS Priya Sharma</h4>
+                  <p class="dash-info-desc">Senior Company Secretary (FCS 10429)<br>MCA Central Registrations & SPICe+</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Online</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Direct email: priya.sharma@verdantbusiness.com')">Email CS</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">CA Rajesh Kumar</h4>
+                  <p class="dash-info-desc">Chartered Accountant (FCA 089221)<br>GST Returns, ITC Audits & Advance Tax</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Online</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Direct email: rajesh.kumar@verdantbusiness.com')">Email CA</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Adv. Vikram Malhotra</h4>
+                  <p class="dash-info-desc">Corporate Legal Counsel (BCI 4192)<br>Commercial Contracts & IP Protection</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 7l4 8M21 7l-4 8"/><path d="M1 15h6M17 15h6"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill info">Available</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Direct email: vikram.malhotra@verdantbusiness.com')">Consult</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Sneha Patel</h4>
+                  <p class="dash-info-desc">Enterprise Relationship Lead<br>Priority Escalations & SLA Management</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">24/7 Desk</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Direct phone: +91 80 4567 8900')">Call Desk</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 04: Recommended Add-On Services (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">04</span> Recommended Corporate Growth Solutions</h3>
+            <p class="dash-section-desc">Recommended next-stage solutions based on your private limited company profile.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Trademark Class 42 Protection</h4>
+                  <p class="dash-info-desc">Protect your software, SaaS, or tech brand identity against infringement.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 9h6M12 9v6"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span style="font-weight: 700; color: var(--text-main);">₹4,500 + Govt</span>
+                <a href="products.html" class="btn btn-primary btn-sm">Add Service</a>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Startup India (DPIIT) Recognition</h4>
+                  <p class="dash-info-desc">Access 3-year Section 80-IAC income tax exemptions and patent fast-tracking.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span style="font-weight: 700; color: var(--text-main);">₹6,999 All-Inc</span>
+                <a href="products.html" class="btn btn-primary btn-sm">Add Service</a>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Co-Founders & IP Agreement</h4>
+                  <p class="dash-info-desc">Custom vesting, equity distribution, non-compete, and IP assignment contracts.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span style="font-weight: 700; color: var(--text-main);">₹5,499</span>
+                <a href="products.html" class="btn btn-primary btn-sm">Add Service</a>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Statutory Audit Readiness</h4>
+                  <p class="dash-info-desc">Preparation of balance sheets, profit & loss statements, and CARO disclosures.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span style="font-weight: 700; color: var(--text-main);">₹9,999 / Yr</span>
+                <a href="products.html" class="btn btn-primary btn-sm">Add Service</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           07. PAYMENTS & INVOICES PANE (EXACT 4 SECTIONS)
+           ====================================================================== -->
+      <section class="dash-pane" id="tab-payments">
+        <!-- SECTION 01: Financial Billing Summary (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <div>
+              <h3 class="dash-section-title"><span class="section-num">01</span> Financial & Billing Overview</h3>
+              <p class="dash-section-desc">Itemized GST tax invoices, transaction histories, and input tax credit reconciliations.</p>
+            </div>
+          </div>
+          <div class="dash-metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+              <div class="metric-data">
+                <h4>Total Invoiced</h4>
+                <div class="metric-val" style="font-size: 1.5rem;">₹25,998</div>
+                <span style="font-size: 0.78rem; color: var(--color-primary); font-weight: 600;">3 Tax Invoices Issued</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <div class="metric-data">
+                <h4>Paid to Date</h4>
+                <div class="metric-val" style="font-size: 1.5rem;">₹12,999</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">Razorpay & Net Banking</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div class="metric-data">
+                <h4>Pending Balance</h4>
+                <div class="metric-val" style="font-size: 1.5rem;">₹12,999</div>
+                <span style="font-size: 0.78rem; color: #F59E0B; font-weight: 600;">Annual Retainer 2026-27</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="12" y2="15"/></svg></div>
+              <div class="metric-data">
+                <h4>Eligible GST ITC</h4>
+                <div class="metric-val" style="font-size: 1.5rem;">₹4,679</div>
+                <span style="font-size: 0.78rem; color: #0284C7; font-weight: 600;">18% GST Input Credit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 02: Billing History & Tax Invoices Table -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">02</span> Billing History & Statutory GST Invoices</h3>
+            <span class="status-pill info">GST Compliant Invoicing</span>
+          </div>
+          <div class="dash-card" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Invoice No</th>
+                    <th>Service Description</th>
+                    <th>Invoice Date</th>
+                    <th>Amount</th>
+                    <th>Payment Status</th>
+                    <th>Tax Invoice</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>#INV-2026-4401</strong></td>
+                    <td>Startup Launch Suite (Pvt Ltd Incorporation)</td>
+                    <td>2026-02-10</td>
+                    <td>₹8,499 + GST</td>
+                    <td><span class="status-pill success">Paid (Razorpay)</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Downloading Tax Invoice #INV-2026-4401.pdf with GSTIN details.')">Download PDF</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#INV-2026-4489</strong></td>
+                    <td>Trademark Class 42 Filing Professional Retainer</td>
+                    <td>2026-02-22</td>
+                    <td>₹4,500 + GST</td>
+                    <td><span class="status-pill success">Paid (Net Banking)</span></td>
+                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Downloading Tax Invoice #INV-2026-4489.pdf with GSTIN details.')">Download PDF</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#INV-2026-4550</strong></td>
+                    <td>Annual Secretarial Retainer 2026-27</td>
+                    <td>2026-02-25</td>
+                    <td>₹12,999 + GST</td>
+                    <td><span class="status-pill warning">Payment Pending</span></td>
+                    <td><button class="btn btn-primary btn-sm" onclick="alert('Proceeding to secure demo payment gateway for ₹15,338 (inclusive of 18% GST).')">Pay Now</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 03: Corporate Payment Methods (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">03</span> Corporate Payment Methods & Retainer Auto-Debit</h3>
+            <p class="dash-section-desc">Manage registered enterprise bank accounts and corporate card billing.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Corporate Credit Card</h4>
+                  <p class="dash-info-desc">HDFC Bank Corporate Visa •••• 4019<br>Expires 08/29 | Default for Retainers</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Default Card</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Updating corporate card details.')">Edit</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Direct Corporate NEFT/RTGS</h4>
+                  <p class="dash-info-desc">ICICI Bank Corporate Current Account<br>Account: 00192849102 | ICIC0000019</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill info">Verified</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Viewing NEFT/RTGS mandate details.')">View</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Corporate UPI Handle</h4>
+                  <p class="dash-info-desc">Verified Instant VPA: verdant@icici<br>Real-time challan & government fees</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Active</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Testing corporate UPI handle.')">Test</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Retainer Auto-Renewal</h4>
+                  <p class="dash-info-desc">Automatic statutory filing renewals with 7-day prior invoice intimation.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Enabled</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Toggling auto-renewal preferences.')">Configure</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 04: Tax Exemption & Billing Info (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">04</span> Tax Identification & Billing Particulars</h3>
+            <p class="dash-section-desc">Ensure valid statutory particulars appear on all B2B tax invoices.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Registered GSTIN</h4>
+                  <p class="dash-info-desc">GSTIN: <strong>29AAZCA1289P1Z8</strong><br>Apex Dynamics Technologies Pvt Ltd</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="12" y2="15"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Active & Matched</span>
+                <span style="color: var(--text-muted);">State: 29 (KA)</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Tax Deduction Account (TAN)</h4>
+                  <p class="dash-info-desc">TAN: <strong>BLRA19482G</strong><br>Required for quarterly Form 24Q/26Q TDS</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Valid TAN</span>
+                <span style="color: var(--text-muted);">Active Allotment</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">TDS Form 16A Certificates</h4>
+                  <p class="dash-info-desc">Download quarterly tax deduction certificates for vendor withholdings.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Downloading Form 16A TDS certificates bundle.')">Download Form 16A</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Billing Desk Support</h4>
+                  <p class="dash-info-desc">Specialized corporate billing desk for custom purchase orders and GST revisions.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Emailing billing desk: billing@verdantbusiness.com')">Email Billing Desk</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           08. CERTIFICATES & DOWNLOADS PANE (EXACT 4 SECTIONS)
+           ====================================================================== -->
+      <section class="dash-pane" id="tab-certificates">
+        <!-- SECTION 01: Certificate Vault Overview (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <div>
+              <h3 class="dash-section-title"><span class="section-num">01</span> Official Charters & Document Vault</h3>
+              <p class="dash-section-desc">Access digitally certified government charters, incorporation seals, and tax letters.</p>
+            </div>
+          </div>
+          <div class="dash-metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              <div class="metric-data">
+                <h4>Total Documents</h4>
+                <div class="metric-val">08</div>
+                <span style="font-size: 0.78rem; color: var(--color-primary); font-weight: 600;">Charters & Licenses</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
+              <div class="metric-data">
+                <h4>MCA Statutory Charters</h4>
+                <div class="metric-val">04</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">COI, e-MoA, e-AoA, CIN</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+              <div class="metric-data">
+                <h4>Tax Identifiers</h4>
+                <div class="metric-val">02</div>
+                <span style="font-size: 0.78rem; color: #0284C7; font-weight: 600;">PAN Card & TAN Letter</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-1.5 1.5L16 7l-1.5-1.5m-1.5 1.5L11 9m-1.5 1.5L8 12m-6 6a5.5 5.5 0 1 1 7.78-7.78L22 2v4h-4v4h-4v4h-2.22A5.5 5.5 0 0 1 2 18z"/></svg></div>
+              <div class="metric-data">
+                <h4>Digital Signatures</h4>
+                <div class="metric-val">Verified</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">ROC Registrar Class 3 DSC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 02: Primary Incorporation Charters (4 Download Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">02</span> Official Ministry of Corporate Affairs Charters</h3>
+            <span class="status-pill success">Government Signed PDFs</span>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card" style="text-align: center; align-items: center;">
+              <div class="dash-cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              <h4 class="dash-info-title">Certificate of Incorporation</h4>
+              <p class="dash-info-desc">CIN: U72900KA2026PTC184920<br>Official digitally signed charter</p>
+              <button class="btn btn-primary btn-sm btn-block" onclick="alert('Downloading Certificate of Incorporation (COI) official PDF.')">Download Certificate</button>
+            </div>
+
+            <div class="dash-info-card" style="text-align: center; align-items: center;">
+              <div class="dash-cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              <h4 class="dash-info-title">e-Memorandum of Association</h4>
+              <p class="dash-info-desc">Form SPICe+ MoA Table A<br>Certified object clauses</p>
+              <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Downloading Certified e-MoA PDF.')">Download e-MoA</button>
+            </div>
+
+            <div class="dash-info-card" style="text-align: center; align-items: center;">
+              <div class="dash-cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              <h4 class="dash-info-title">e-Articles of Association</h4>
+              <p class="dash-info-desc">Form SPICe+ AoA Table A<br>Internal governance rules</p>
+              <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Downloading Certified e-AoA PDF.')">Download e-AoA</button>
+            </div>
+
+            <div class="dash-info-card" style="text-align: center; align-items: center;">
+              <div class="dash-cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+              <h4 class="dash-info-title">Company PAN & TAN Card</h4>
+              <p class="dash-info-desc">PAN: AAZCA1289P | TAN: BLRA19482G<br>Official ITD allotment letter</p>
+              <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Downloading Company PAN and TAN Allotment letter.')">Download e-PAN</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 03: Regulatory Registrations & Commercial Licenses (4 Download Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">03</span> Statutory Tax & Business Licenses</h3>
+            <p class="dash-section-desc">Download commercial registrations for banking, tenders, and operations.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">GST Registration (REG-06)</h4>
+                  <p class="dash-info-desc">GSTIN: 29AAZCA1289P1Z8<br>Karnataka State Jurisdiction Certificate</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="12" y2="15"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Downloading GST REG-06 Certificate PDF')">Download REG-06</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">MSME Udyam Certificate</h4>
+                  <p class="dash-info-desc">Udyam Registration: UDYAM-KR-03-019482<br>Micro Enterprise Status</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="9" y1="6" x2="9.01" y2="6"/><line x1="15" y1="6" x2="15.01" y2="6"/><line x1="9" y1="10" x2="9.01" y2="10"/><line x1="15" y1="10" x2="15.01" y2="10"/><line x1="9" y1="14" x2="9.01" y2="14"/><line x1="15" y1="14" x2="15.01" y2="14"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Downloading Udyam Certificate PDF')">Download Udyam</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Professional Tax (PTRC/PTEC)</h4>
+                  <p class="dash-info-desc">Employer & Entity registration certificate with Karnataka Tax Department.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Downloading Professional Tax Certificate')">Download PT Cert</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Board Resolution Extract</h4>
+                  <p class="dash-info-desc">Certified board resolution authorizing directors to open current bank account.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Downloading Certified Board Resolution Extract')">Download Resolution</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 04: Document Verification & Secure Sharing (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">04</span> Verification, Sharing & Certified Copies</h3>
+            <p class="dash-section-desc">Generate secure read-only due diligence links or request physical apostilled copies.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">MCA CRC QR Code Validator</h4>
+                  <p class="dash-info-desc">Verify authenticity directly against MCA21 government database records.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Launching MCA21 QR Validator: Validated CIN U72900KA2026PTC184920.')">Verify Online</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Due-Diligence Share Link</h4>
+                  <p class="dash-info-desc">Generate a time-limited 7-day secure view-only link for banks or investors.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Secure Link Generated: https://verdantbusiness.com/verify?token=v8812k2026 (Copied to clipboard)')">Copy Share Link</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Master Archive (.ZIP)</h4>
+                  <p class="dash-info-desc">Download every certified charter, PAN letter, and board resolution in a single bundle.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-primary btn-sm btn-block" onclick="alert('Packaging Master Incorporation Kit: Apex_Dynamics_Complete_Charter_Kit.zip (14.2 MB)')">Download All (.ZIP)</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Notarized Hard Copies</h4>
+                  <p class="dash-info-desc">Order physical printed certificates embossed with corporate seal and notarized.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Order Dispatched: Physical charter kit will be delivered via Blue Dart Express.')">Order Hard Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           09. NOTIFICATIONS PANE (EXACT 4 SECTIONS)
+           ====================================================================== -->
+      <section class="dash-pane" id="tab-notifications">
+        <!-- SECTION 01: Notification Summary (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <div>
+              <h3 class="dash-section-title"><span class="section-num">01</span> Alert Center Health & Status</h3>
+              <p class="dash-section-desc">Real-time alerts dispatched by your designated legal team and government portals.</p>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="alert('All notifications marked as read.')">Mark All as Read</button>
+          </div>
+          <div class="dash-metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+              <div class="metric-data">
+                <h4>Unread Alerts</h4>
+                <div class="metric-val">02</div>
+                <span style="font-size: 0.78rem; color: var(--color-primary); font-weight: 600;">Requires attention</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+              <div class="metric-data">
+                <h4>Statutory Deadlines</h4>
+                <div class="metric-val">01</div>
+                <span style="font-size: 0.78rem; color: #F59E0B; font-weight: 600;">GSTR-3B in 5 days</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              <div class="metric-data">
+                <h4>Document Notice</h4>
+                <div class="metric-val">01</div>
+                <span style="font-size: 0.78rem; color: #0284C7; font-weight: 600;">Director KYC Proof</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div class="metric-data">
+                <h4>System Security</h4>
+                <div class="metric-val" style="font-size: 1.45rem;">100% Secure</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">Zero security alerts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 02: Real-time Compliance Alert Feed -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">02</span> Real-Time Compliance & Authority Feed</h3>
+            <span class="status-pill info">Automated Legal Broadcast</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div style="padding: 1.25rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border-card); border-left: 4px solid #10B981; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong style="color: #10B981; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">Incorporation Milestone Complete</strong>
+                <p style="font-size: 0.88rem; margin-bottom: 0;">Your Certificate of Incorporation has been issued by the Ministry of Corporate Affairs and placed into your Certificate Vault.</p>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; margin-left: 1rem;">2 hours ago</span>
+            </div>
+
+            <div style="padding: 1.25rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border-card); border-left: 4px solid var(--color-primary); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong style="color: var(--color-primary); font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">GSTIN Application In Review</strong>
+                <p style="font-size: 0.88rem; margin-bottom: 0;">Aadhaar authentication successfully completed. Application forwarded to Karnataka State Tax Officer for clearance.</p>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; margin-left: 1rem;">1 day ago</span>
+            </div>
+
+            <div style="padding: 1.25rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border-card); border-left: 4px solid #F59E0B; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong style="color: #F59E0B; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">Document Notice: Utility Proof</strong>
+                <p style="font-size: 0.88rem; margin-bottom: 0;">Director 2 residential address bank statement requires an updated statement dated within 60 days to satisfy MCA norms.</p>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; margin-left: 1rem;">3 days ago</span>
+            </div>
+
+            <div style="padding: 1.25rem; background-color: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border-card); border-left: 4px solid #0284C7; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong style="color: #0284C7; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">Upcoming Statutory Deadline</strong>
+                <p style="font-size: 0.88rem; margin-bottom: 0;">GSTR-3B monthly return for the previous tax period is due on the 20th. Our CA team is reconciling sales registers.</p>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; margin-left: 1rem;">5 days ago</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 03: Alert Dispatch Channels (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">03</span> Multi-Channel Notification Preferences</h3>
+            <p class="dash-section-desc">Manage destination channels for statutory reminders and filing alerts.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Registered Business Email</h4>
+                  <p class="dash-info-desc">alexander@verdantcorp.com<br>Primary channel for signed PDF copies</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Active</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Configuring email notification preferences.')">Configure</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Instant SMS Dispatch</h4>
+                  <p class="dash-info-desc">+91 98765 43210<br>Urgent alerts for ROC resubmissions</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Active</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('SMS alerts are enabled.')">Configure</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">WhatsApp Business Alerts</h4>
+                  <p class="dash-info-desc">Verified Enterprise Bot<br>Status updates & instant PDF delivery</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Connected</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('WhatsApp broadcast active.')">Manage</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Portal In-App Badges</h4>
+                  <p class="dash-info-desc">Browser notifications<br>Real-time updates when logged into portal</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Enabled</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Portal notification settings updated.')">Settings</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 04: Official Regulatory Circulars (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">04</span> Regulatory Bulletins & Statutory Circulars</h3>
+            <p class="dash-section-desc">Key legal and tax developments curated by our corporate research board.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">MCA Settlement Scheme</h4>
+                  <p class="dash-info-desc">Fast-track resolution for delayed LLP filings with waiver of heavy additional fees.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill info">MCA Circular</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Opening MCA Circular 02/2026')">Read Circular</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">GST E-Invoicing Thresholds</h4>
+                  <p class="dash-info-desc">CBIC advisory on e-invoice generation rules for emerging B2B technology startups.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="12" y2="15"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill info">CBIC Update</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Opening GST Advisory on E-invoicing')">Read Advisory</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">RBI FEMA Guidelines</h4>
+                  <p class="dash-info-desc">Form FC-GPR filing procedures for startups receiving cross-border venture capital.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill info">RBI Circular</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Opening RBI FEMA Master Direction')">Read Direction</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Board Meeting Standards</h4>
+                  <p class="dash-info-desc">Secretarial Standard-1 (SS-1) requirements for convening quarterly meetings.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill info">ICSI Guidance</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Opening ICSI SS-1 Guidance Note')">Read Guidance</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           10. PROFILE & SETTINGS PANE (EXACT 4 SECTIONS)
+           ====================================================================== -->
+      <section class="dash-pane" id="tab-settings">
+        <!-- SECTION 01: Corporate Identity Snapshot (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <div>
+              <h3 class="dash-section-title"><span class="section-num">01</span> Registered Corporate Entity Snapshot</h3>
+              <p class="dash-section-desc">Master statutory identifiers recorded with the Ministry of Corporate Affairs.</p>
+            </div>
+          </div>
+          <div class="dash-metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="9" y1="6" x2="9.01" y2="6"/><line x1="15" y1="6" x2="15.01" y2="6"/><line x1="9" y1="10" x2="9.01" y2="10"/><line x1="15" y1="10" x2="15.01" y2="10"/><line x1="9" y1="14" x2="9.01" y2="14"/><line x1="15" y1="14" x2="15.01" y2="14"/></svg></div>
+              <div class="metric-data">
+                <h4>Company Structure</h4>
+                <div class="metric-val" style="font-size: 1.35rem;">Private Limited</div>
+                <span style="font-size: 0.78rem; color: var(--color-primary); font-weight: 600;">Apex Dynamics Technologies</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              <div class="metric-data">
+                <h4>Corporate ID (CIN)</h4>
+                <div class="metric-val" style="font-size: 1.1rem; letter-spacing: -0.02em;">U72900KA2026</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">PTC184920 Allotted</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v12M15 9.5a3 3 0 0 0-3-2.5h-1a2.5 2.5 0 0 0 0 5h2a2.5 2.5 0 0 1 0 5h-1a3 3 0 0 1-3-2.5"/></svg></div>
+              <div class="metric-data">
+                <h4>Authorized Capital</h4>
+                <div class="metric-val" style="font-size: 1.35rem;">₹10,00,000</div>
+                <span style="font-size: 0.78rem; color: #0284C7; font-weight: 600;">Paid-Up: ₹1,00,000</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
+              <div class="metric-data">
+                <h4>ROC Jurisdiction</h4>
+                <div class="metric-val" style="font-size: 1.35rem;">Bangalore</div>
+                <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">State: Karnataka</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 02: Executive Profile & Contact Management Form -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">02</span> Executive Account Details & Contact Information</h3>
+            <p class="dash-section-desc">Update your authorized executive contact details for official ROC intimations.</p>
+          </div>
+          <div class="dash-card">
+            <form id="profileForm">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;" class="grid-2">
+                <div class="form-group">
+                  <label for="profileFullName" class="form-label">Full Name of Authorized Executive</label>
+                  <input type="text" id="profileFullName" class="form-control" value="Alexander Wright" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="profileEmail" class="form-label">Registered Corporate Email Address</label>
+                  <input type="email" id="profileEmail" class="form-control" value="alexander@verdantcorp.com" required>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;" class="grid-2">
+                <div class="form-group">
+                  <label for="profilePhone" class="form-label">Primary Mobile Phone (With Country Code)</label>
+                  <input type="tel" id="profilePhone" class="form-control" value="+91 98765 43210" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="profileBusiness" class="form-label">Registered Entity Legal Name</label>
+                  <input type="text" id="profileBusiness" class="form-control" value="Apex Dynamics Technologies Pvt Ltd" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="profileBusinessType" class="form-label">Incorporated Entity Structure</label>
+                <select id="profileBusinessType" class="form-control">
+                  <option value="Private Limited Company">Private Limited Company</option>
+                  <option value="Limited Liability Partnership">Limited Liability Partnership (LLP)</option>
+                  <option value="One Person Company">One Person Company (OPC)</option>
+                  <option value="Sole Proprietorship">Sole Proprietorship</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="profileAddress" class="form-label">Registered Corporate Office Address</label>
+                <textarea id="profileAddress" class="form-control" rows="3">Verdant Business Tower, 8th Floor, Outer Ring Road, Bellandur, Bengaluru, Karnataka 560103</textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg">SAVE PROFILE CHANGES</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- SECTION 03: Board of Directors & Officers (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">03</span> Board of Directors & Key Managerial Personnel</h3>
+            <p class="dash-section-desc">Active DIN holders and designated statutory officers recorded on MCA master data.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Alexander Wright</h4>
+                  <p class="dash-info-desc">Managing Director<br>DIN: <strong>09841200</strong> | Allotted Feb 2026</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">DIR-3 Verified</span>
+                <span style="color: var(--text-muted);">Signatory</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Elena Rostova</h4>
+                  <p class="dash-info-desc">Director & Co-Founder<br>DIN: <strong>09841201</strong> | Allotted Feb 2026</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill warning">Utility Bill Needed</span>
+                <span style="color: var(--text-muted);">Signatory</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">CS Priya Sharma</h4>
+                  <p class="dash-info-desc">Appointed Company Secretary<br>FCS 10429 | Practicing CS Lead</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Certified Lead</span>
+                <span style="color: var(--text-muted);">Secretarial</span>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">M/s S.R. & Associates</h4>
+                  <p class="dash-info-desc">Statutory Auditors (CA)<br>Firm Reg: 012944S | Chartered Accountants</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill info">Appointed Year 1</span>
+                <span style="color: var(--text-muted);">ADT-1 Ready</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 04: Security, Team Access & Session Controls (4 Cards) -->
+        <div class="dash-section">
+          <div class="dash-section-header">
+            <h3 class="dash-section-title"><span class="section-num">04</span> Security, Permissions & Portal Controls</h3>
+            <p class="dash-section-desc">Manage two-factor authentication, team roles, and session security.</p>
+          </div>
+          <div class="grid-4">
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Two-Factor Auth (2FA)</h4>
+                  <p class="dash-info-desc">Time-based one-time password (TOTP) security enabled via Google Authenticator.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">2FA Active</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Two-factor authentication is active and protecting your portal.')">Manage</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Active Portal Sessions</h4>
+                  <p class="dash-info-desc">Current session: Bengaluru, India<br>Browser: Chrome Desktop (Windows)</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill success">Current IP Safe</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Audit log shows 1 active session in Bengaluru.')">Audit</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Role-Based Team Access</h4>
+                  <p class="dash-info-desc">Assign Finance, Legal, or Read-Only credentials to co-founders and accountants.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <span class="status-pill info">2 Team Members</span>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Managing team permissions.')">Invite</button>
+              </div>
+            </div>
+
+            <div class="dash-info-card">
+              <div class="dash-info-card-top">
+                <div>
+                  <h4 class="dash-info-title">Master Data Export</h4>
+                  <p class="dash-info-desc">Export full corporate audit trail, billing records, and document history.</p>
+                </div>
+                <div class="dash-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+              </div>
+              <div class="dash-info-footer">
+                <button class="btn btn-secondary btn-sm btn-block" onclick="alert('Generating complete data export archive...')">Export Data</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

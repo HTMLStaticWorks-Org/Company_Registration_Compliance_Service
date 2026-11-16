@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge & Regulatory Insights | Verdant Business Services</title>
+  <meta name="description" content="In-depth corporate consulting articles, company incorporation checklists, GST tax guidance, and statutory compliance updates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="assets/js/theme.js"></script>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="alternate icon" type="image/png" href="assets/images/website-logo.png">
+</head>
+<body>
+
+  <!-- Sticky Global Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Verdant Business Services Homepage">
+        <div class="brand-icon-box">
+          <img src="assets/images/logo.svg" alt="Verdant Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-title">VERDANT</span>
+          <span class="brand-subtitle">Business Services</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1</a>
+            <a href="home-2.html" class="dropdown-item">Home 2</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="resources.html" class="nav-link active">Resources</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="header-actions">
+        <button class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme"></button>
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Right to Left / Left to Right">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16M16 3l4 4-4 4"/>
+            <path d="M20 17H4M8 21l-4-4 4-4"/>
+          </svg>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+        <button class="hamburger-btn" aria-label="Open mobile navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-dropdown">
+      <button class="mobile-nav-link mobile-dropdown-btn" aria-expanded="true">
+        <span>Home</span>
+        <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="index.html" class="mobile-sublink">Home 1</a>
+        <a href="home-2.html" class="mobile-sublink">Home 2</a>
+      </div>
+    </div>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="products.html" class="mobile-nav-link">Products</a>
+    <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+    <a href="resources.html" class="mobile-nav-link active">Resources</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+    <div class="mobile-drawer-toggles">
+      <button class="toggle-btn theme-toggle-btn" aria-label="Toggle light and dark theme" title="Toggle Light / Dark Theme"></button>
+      <button class="toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Right to Left / Left to Right">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 7h16M16 3l4 4-4 4"/>
+          <path d="M20 17H4M8 21l-4-4 4-4"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-actions">
+      <a href="login.html" class="btn btn-primary btn-block">Login</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- 01. Resources Hero (image-73.png) -->
+    <section class="section section-ice" style="position: relative; overflow: hidden; padding-block: clamp(4rem, 6.5vw, 6.5rem);">
+      <div class="container">
+        <div class="hero-split" style="gap: clamp(2rem, 4vw, 4rem); align-items: center;">
+          <div>
+            <div class="eyebrow">RESEARCH & ADVISORY LIBRARY</div>
+            <h1 style="margin-bottom: 1.25rem;">CORPORATE GUIDES, LEGAL TEMPLATES &amp; COMPLIANCE ROADMAPS</h1>
+            <p style="font-size: 1.15rem; margin-bottom: 2rem;">
+              Authoritative guides, statutory compliance checklists, and corporate law updates written by certified Chartered Accountants and practicing Company Secretaries.
+            </p>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <span class="status-pill info">Company Law</span>
+              <span class="status-pill success">Direct Taxes</span>
+              <span class="status-pill warning">GST Rules</span>
+              <span class="status-pill info">Startup Funding</span>
+            </div>
+          </div>
+          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl);" data-tilt>
+            <img src="images/image-73.png" alt="Corporate team collaborating in glass conference room around whiteboard" style="width: 100%; height: auto; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. Featured Article & Categories -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">FEATURED INTELLIGENCE</div>
+          <h2>ESSENTIAL READING FOR CORPORATE FOUNDERS</h2>
+          <p>Key legal considerations before incorporating or expanding operations.</p>
+        </div>
+
+        <!-- 03. Article Categories -->
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3.5rem;">
+          <button class="btn btn-primary btn-sm">All Articles</button>
+          <button class="btn btn-secondary btn-sm">Company Registration</button>
+          <button class="btn btn-secondary btn-sm">GST & Tax</button>
+          <button class="btn btn-secondary btn-sm">Compliance</button>
+          <button class="btn btn-secondary btn-sm">Startup Guidance</button>
+        </div>
+
+        <!-- 04. Article Listing (6 Cards - Even Number Rule) -->
+        <div class="grid-6">
+          <!-- Article 1: image-30.png -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-30.png" alt="Corporate team analyzing due diligence options behind glass divider">
+              <span class="card-badge">Structuring</span>
+            </div>
+            <div class="card-body">
+              <span class="eyebrow" style="font-size: 0.72rem; margin-bottom: 0.5rem;">Entity Selection</span>
+              <h3 class="card-title">Choosing the Right Business Structure for 2026</h3>
+              <p class="card-desc">An exhaustive breakdown of Private Limited, LLP, and OPC models covering liability protection, corporate tax rates, and investor cap-table mechanics.</p>
+              <div class="card-footer">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">8 Min Read</span>
+                <a href="#" class="btn btn-secondary btn-sm" onclick="showToast('Opening Regulatory Advisory: Choosing the Right Business Structure for 2026', 'info'); return false;">Read More →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 2: image-74.png -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-74.png" alt="Legal consultant reviewing clauses with client overlooking historic city skyline">
+              <span class="card-badge">Checklist</span>
+            </div>
+            <div class="card-body">
+              <span class="eyebrow" style="font-size: 0.72rem; margin-bottom: 0.5rem;">Documentation</span>
+              <h3 class="card-title">Essential Documents Required for Incorporation</h3>
+              <p class="card-desc">Avoid common ROC query rejections. Detailed guidelines on proof of address utility bills, director KYC credentials, and landlord NOC formats.</p>
+              <div class="card-footer">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">6 Min Read</span>
+                <a href="#" class="btn btn-secondary btn-sm" onclick="showToast('Opening Regulatory Advisory: Essential Documents Required for Incorporation', 'info'); return false;">Read More →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 3: image-9.png -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-9.png" alt="Two businesswomen smiling and shaking hands across modern meeting table">
+              <span class="card-badge">Tax Law</span>
+            </div>
+            <div class="card-body">
+              <span class="eyebrow" style="font-size: 0.72rem; margin-bottom: 0.5rem;">GST Compliance</span>
+              <h3 class="card-title">Understanding GST Registration & Thresholds</h3>
+              <p class="card-desc">When is registration legally compulsory? A practical guide on the ₹40 Lakh goods / ₹20 Lakh services turnover rules and inter-state e-commerce exceptions.</p>
+              <div class="card-footer">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">5 Min Read</span>
+                <a href="#" class="btn btn-secondary btn-sm" onclick="showToast('Opening Regulatory Advisory: Understanding GST Registration & Thresholds', 'info'); return false;">Read More →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 4: image-19.png -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-19.png" alt="Diverse startup team celebrating milestone launch with project paperwork">
+              <span class="card-badge">Calendar</span>
+            </div>
+            <div class="card-body">
+              <span class="eyebrow" style="font-size: 0.72rem; margin-bottom: 0.5rem;">Corporate Secretarial</span>
+              <h3 class="card-title">Your First-Year Compliance Checklist (Day 1 to 365)</h3>
+              <p class="card-desc">Post-incorporation statutory mandates: Form INC-20A (Commencement of Business), First Auditor Appointment (ADT-1), and mandatory Board meetings.</p>
+              <div class="card-footer">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">10 Min Read</span>
+                <a href="#" class="btn btn-secondary btn-sm" onclick="showToast('Opening Regulatory Advisory: Your First-Year Compliance Checklist', 'info'); return false;">Read More →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 5: image-41.png -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-41.png" alt="Group of corporate professionals in international business attire in glass office">
+              <span class="card-badge">FDI & Cross-Border</span>
+            </div>
+            <div class="card-body">
+              <span class="eyebrow" style="font-size: 0.72rem; margin-bottom: 0.5rem;">Foreign Subsidiary</span>
+              <h3 class="card-title">Incorporating Wholly-Owned Subsidiaries in India</h3>
+              <p class="card-desc">Step-by-step regulatory roadmap for international enterprises establishing Indian operational entities under automatic RBI/FDI routes.</p>
+              <div class="card-footer">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">9 Min Read</span>
+                <a href="#" class="btn btn-secondary btn-sm" onclick="showToast('Opening Regulatory Advisory: Incorporating Wholly-Owned Subsidiaries in India', 'info'); return false;">Read More →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 6: image-43.png -->
+          <div class="corp-card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="images/image-43.png" alt="Executives in boardroom discussing shareholder agreement and founder equity">
+              <span class="card-badge">Cap Table</span>
+            </div>
+            <div class="card-body">
+              <span class="eyebrow" style="font-size: 0.72rem; margin-bottom: 0.5rem;">Shareholders</span>
+              <h3 class="card-title">Founder Equity Vesting & Shareholder Agreements</h3>
+              <p class="card-desc">Why a handshake isn't enough. Structuring 4-year vesting with 1-year cliff, drag-along rights, and exit covenants to safeguard founder relationships.</p>
+              <div class="card-footer">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">7 Min Read</span>
+                <a href="#" class="btn btn-secondary btn-sm" onclick="showToast('Opening Regulatory Advisory: Founder Equity Vesting & Shareholder Agreements', 'info'); return false;">Read More →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. REGULATORY BLUEPRINTS & TOOLKIT VAULT (New Section: Bento-Grid Layout) -->
+    <section class="section section-alt" id="regulatory-toolkits">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">FOUNDER TOOLKITS & BLUEPRINTS</div>
+          <h2>DOWNLOADABLE STATUTORY TEMPLATES & MODELS</h2>
+          <p>Pre-vetted legal agreements, MCA e-filing worksheets, and cap table models engineered for immediate corporate deployment.</p>
+        </div>
+
+        <div class="toolkit-bento-grid">
+          <!-- Toolkit 1: Cap Table (image-42.png) -->
+          <div class="toolkit-card toolkit-featured">
+            <div class="toolkit-img-wrap">
+              <img src="images/image-42.png" alt="Corporate tax and legal consultants in glass corner office">
+              <span class="toolkit-badge">Flagship Model</span>
+            </div>
+            <div class="toolkit-content">
+              <div class="toolkit-meta">
+                <span class="file-chip xlsx">XLSX</span>
+                <span class="file-chip docx">DOCX</span>
+                <span class="toolkit-downloads">🔥 2,450+ Downloads</span>
+              </div>
+              <h3 class="toolkit-title">2026 Founder Shareholding & Cap Table Matrix</h3>
+              <p class="toolkit-desc">Exhaustive dilution modeling covering pre-seed to Series A rounds, 4-year founder vesting schedules with 1-year cliff, ESOP pools, and safe exit covenant clauses.</p>
+              <div class="toolkit-features-list">
+                <div class="toolkit-feat-item">✓ Fully automated dynamic cap-table formula workbook</div>
+                <div class="toolkit-feat-item">✓ Pre-drafted Founder Shareholder Agreement (SHA) template</div>
+                <div class="toolkit-feat-item">✓ Board resolution format for share issuance & valuation</div>
+              </div>
+              <div class="toolkit-footer">
+                <span class="toolkit-size">Package Size: 12.4 MB • Updated for FY 2026</span>
+                <button type="button" class="btn btn-primary btn-sm" onclick="showToast('Downloading Founder Shareholding & Cap Table Matrix (12.4 MB)...', 'success');">Download Toolkit ↓</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Toolkit 2: ROC Checklist (image-37.png) -->
+          <div class="toolkit-card toolkit-featured">
+            <div class="toolkit-img-wrap">
+              <img src="images/image-37.png" alt="Smiling team of corporate account managers in modern office corridor">
+              <span class="toolkit-badge">Audit Shield</span>
+            </div>
+            <div class="toolkit-content">
+              <div class="toolkit-meta">
+                <span class="file-chip pdf">PDF</span>
+                <span class="file-chip xlsx">XLSX</span>
+                <span class="toolkit-downloads">⭐ 3,120+ Downloads</span>
+              </div>
+              <h3 class="toolkit-title">MCA & ROC Statutory Annual Audit Checklist</h3>
+              <p class="toolkit-desc">Step-by-step master audit framework to prepare Forms AOC-4, MGT-7, and DIR-3 KYC with zero query delays and zero delayed filing government penalty fees.</p>
+              <div class="toolkit-features-list">
+                <div class="toolkit-feat-item">✓ 48-point statutory balance sheet verification protocol</div>
+                <div class="toolkit-feat-item">✓ Director disqualification prevention & DIN status checks</div>
+                <div class="toolkit-feat-item">✓ Official MCA fee and additional statutory penalty calculator</div>
+              </div>
+              <div class="toolkit-footer">
+                <span class="toolkit-size">Package Size: 8.6 MB • Verified by Practicing CS</span>
+                <button type="button" class="btn btn-primary btn-sm" onclick="showToast('Downloading ROC Annual Audit Checklist & Calculator (8.6 MB)...', 'success');">Download Checklist ↓</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Toolkit 3: GST Workbook -->
+          <div class="toolkit-card">
+            <div class="toolkit-content">
+              <div class="toolkit-meta">
+                <span class="file-chip xlsx">XLSX</span>
+                <span class="toolkit-downloads">1,890+ Downloads</span>
+              </div>
+              <h3 class="toolkit-title">GST 2B Reconciliation & Tax Ledger Workbook</h3>
+              <p class="toolkit-desc">Interactive spreadsheet designed to automate GSTR-2B matching against your purchase ledger, identify supplier filing mismatches, and safeguard Input Tax Credits.</p>
+              <div class="toolkit-features-list">
+                <div class="toolkit-feat-item">✓ Macro-enabled 2B vs Purchase invoice matching engine</div>
+                <div class="toolkit-feat-item">✓ Draft reply templates for GST DRC-01 statutory notices</div>
+                <div class="toolkit-feat-item">✓ Monthly GSTR-3B tax payment summary sheet</div>
+              </div>
+              <div class="toolkit-footer">
+                <span class="toolkit-size">Package Size: 14.1 MB • Excel 2026 Edition</span>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Downloading GST 2B Reconciliation Workbook (14.1 MB)...', 'success');">Download Model ↓</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Toolkit 4: Board Resolutions Pack -->
+          <div class="toolkit-card">
+            <div class="toolkit-content">
+              <div class="toolkit-meta">
+                <span class="file-chip docx">DOCX</span>
+                <span class="toolkit-downloads">2,180+ Downloads</span>
+              </div>
+              <h3 class="toolkit-title">Master Board Resolutions & Corporate Minutes Pack</h3>
+              <p class="toolkit-desc">25+ certified corporate secretarial draft resolutions for director appointments, registered office relocation, banking mandate alterations, and AGM notices.</p>
+              <div class="toolkit-features-list">
+                <div class="toolkit-feat-item">✓ Form DIR-12, INC-22, and MGT-14 ready resolution wording</div>
+                <div class="toolkit-feat-item">✓ Standard Annual General Meeting notice & agenda formats</div>
+                <div class="toolkit-feat-item">✓ Statutory register entry templates under Companies Act</div>
+              </div>
+              <div class="toolkit-footer">
+                <span class="toolkit-size">Package Size: 5.8 MB • Certified Secretarial Drafts</span>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Downloading Master Board Resolutions Pack (5.8 MB)...', 'success');">Download Pack ↓</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. STATUTORY ROADMAP & QUARTERLY MATRIX (New Section: Split Horizon Layout) -->
+    <section class="section" id="compliance-roadmap">
+      <div class="container">
+        <div class="roadmap-split-layout">
+          <!-- Left Sticky Strategic Column (image-33.png) -->
+          <div class="roadmap-hero-col">
+            <div class="eyebrow">CHRONOLOGICAL ROADMAP</div>
+            <h2>THE 2026 STATUTORY COMPLIANCE CALENDAR &amp; DEADLINES</h2>
+            <p class="roadmap-lead">
+              A comprehensive quarterly execution protocol ensuring your enterprise never misses a government statutory deadline, audit milestone, or tax filing.
+            </p>
+
+            <div class="roadmap-banner-card">
+              <div class="roadmap-img-box">
+                <img src="images/image-33.png" alt="Corporate portrait of eight legal and compliance professionals">
+                <div class="roadmap-glass-tag">
+                  <span class="tag-pulse"></span>
+                  <span>MCA & GSTIN Certified Protocol</span>
+                </div>
+              </div>
+              <div class="roadmap-banner-body">
+                <div class="stat-pill-row">
+                  <div class="stat-mini-badge">
+                    <strong>100%</strong>
+                    <span>On-Time Filing</span>
+                  </div>
+                  <div class="stat-mini-badge">
+                    <strong>Zero</strong>
+                    <span>MCA Penalties</span>
+                  </div>
+                  <div class="stat-mini-badge">
+                    <strong>24/7</strong>
+                    <span>Vault Sync</span>
+                  </div>
+                </div>
+                <a href="contact.html#contact-form-section" class="btn btn-primary btn-block" style="margin-top: 1.25rem;">Schedule Compliance Audit →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Timeline Matrix (4 Quarters - Even Number Rule) -->
+          <div class="roadmap-timeline-col">
+            <!-- Quarter 1 -->
+            <div class="timeline-quarter-card">
+              <div class="quarter-indicator">
+                <span class="quarter-tag">Q1</span>
+                <span class="quarter-period">APR – JUN</span>
+              </div>
+              <div class="quarter-body">
+                <div class="quarter-hdr">
+                  <h4>Statutory Foundation & First-Year Filings</h4>
+                  <span class="status-chip chip-foundation">Mandatory Kickoff</span>
+                </div>
+                <p>Initial statutory setup milestones for newly incorporated and ongoing corporate entities.</p>
+                <div class="milestone-items">
+                  <div class="milestone-row">
+                    <span class="milestone-dot"></span>
+                    <div class="milestone-details">
+                      <strong>Form INC-20A (Commencement of Business)</strong>
+                      <span>Must be filed within 180 days of incorporation with capital deposit proof.</span>
+                    </div>
+                  </div>
+                  <div class="milestone-row">
+                    <span class="milestone-dot"></span>
+                    <div class="milestone-details">
+                      <strong>Form ADT-1 (First Statutory Auditor Appointment)</strong>
+                      <span>Board appointment within 30 days of registration by practicing CA.</span>
+                    </div>
+                  </div>
+                  <div class="milestone-row">
+                    <span class="milestone-dot"></span>
+                    <div class="milestone-details">
+                      <strong>Q1 GST Returns & Advance Tax (Instalment 1)</strong>
+                      <span>GSTR-1, GSTR-3B monthly filings and 15% advance income tax remittance.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quarter 2 -->
+            <div class="timeline-quarter-card">
+              <div class="quarter-indicator">
+                <span class="quarter-tag">Q2</span>
+                <span class="quarter-period">JUL – SEP</span>
+              </div>
+              <div class="quarter-body">
+                <div class="quarter-hdr">
+                  <h4>Director KYC & AGM Preparation</h4>
+                  <span class="status-chip chip-governance">Governance Phase</span>
+                </div>
+                <p>Crucial compliance window to preserve active director DIN status and convene Annual General Meetings.</p>
+                <div class="milestone-items">
+                  <div class="milestone-row">
+                    <span class="milestone-dot"></span>
+                    <div class="milestone-details">
+                      <strong>Mandatory DIR-3 KYC E-Filing</strong>
+                      <span>Mandatory annual verification for all active DIN holders prior to September 30.</span>
+                    </div>
+                  </div>
+                  <div class="milestone-row">
+                    <span class="milestone-dot"></span>
+                    <div class="milestone-details">
+                      <strong>Statutory Audit Finalization & Board Report</strong>
+                      <span>Signing of audited financials, statutory auditor's report, and director disclosures.</span>
+                    </div>
+                  </div>
+                  <div class="milestone-row">
+                    <span class="milestone-dot"></span>
+                    <div class="milestone-details">
+                      <strong>Annual General Meeting (AGM) Execution</strong>
+                      <span>Convene formal shareholder meeting within 6 months of financial year close.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quarter 3 -->
+            <div class="timeline-quarter-card">
+              <div class="quarter-indicator">
+                <span class="quarter-tag">Q3</span>
+                <span class="quarter-period">OCT – DEC</span>
+              </div>
+              <div class="quarter-body">
+                <div class="quarter-hdr">
+                  <h4>Annual ROC Filings & Financial Submissions</h4>
+                  <span class="status-chip chip-peak">Peak Statutory Window</span>
+                </div>
+                <p>The primary annual MCA compliance window where audited statements are submitted.</p>
+                <div class="milestone-items">
+                  <div class="milestone-row">
+                    <span class="milestone-dot"></span>
+                    <div class="milestone-details">
+                      <strong>Form AOC-4 (Financial Statements Filing)</strong>
+                      <span>Filing of Balance Sheet, P&L, Auditor Report, and Board Report within 30 days of AGM.</span>
+                    </div>
+                  </div>
+                  <div class="milestone-row">
+                    <span class="milestone-dot"></span>
+                    <div class="milestone-details">
+                      <strong>Form MGT-7 / 7A (Annual Return Filing)</strong>
+                      <span>Detailed disclosure of shareholding patterns, directorships, and governance meetings.</span>
+                    </div>
+                  </div>
+                  <div class="milestone-row">
+                    <span class="milestone-dot"></span>
+                    <div class="milestone-details">
+                      <strong>Annual GSTR-9 & GSTR-9C Preparation</strong>
+                      <span>Annual GST reconciliation and statutory tax audit compilation.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quarter 4 -->
+            <div class="timeline-quarter-card">
+              <div class="quarter-indicator">
+                <span class="quarter-tag">Q4</span>
+                <span class="quarter-period">JAN – MAR</span>
+              </div>
+              <div class="quarter-body">
+                <div class="quarter-hdr">
+                  <h4>Year-End Closing, MSME & Fiscal Recon</h4>
+                  <span class="status-chip chip-closing">Year-End Closing</span>
+                </div>
+                <p>Closing the financial books, reconciling Input Tax Credit, and preparing upcoming fiscal budgets.</p>
+                <div class="milestone-items">
+                  <div class="milestone-row">
+                    <span class="milestone-dot"></span>
+                    <div class="milestone-details">
+                      <strong>Form MSME-1 (Half-Yearly Outstanding Dues)</strong>
+                      <span>Mandatory report on vendor dues exceeding 45 days under MSMED Act.</span>
+                    </div>
+                  </div>
+                  <div class="milestone-row">
+                    <span class="milestone-dot"></span>
+                    <div class="milestone-details">
+                      <strong>Full-Year ITC Audit & Advance Tax Q4 (Final 100%)</strong>
+                      <span>Final reconciliation of purchase ledger vs portal before fiscal year cutoff.</span>
+                    </div>
+                  </div>
+                  <div class="milestone-row">
+                    <span class="milestone-dot"></span>
+                    <div class="milestone-details">
+                      <strong>Statutory Register Updates & Audit Pre-Pack</strong>
+                      <span>Digital archiving of register of members, directors, charges, and debentures.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. Newsletter / Consultation CTA -->
+    <section class="section section-navy">
+      <div class="container" style="max-width: 800px; text-align: center;">
+        <div class="eyebrow" style="background: rgba(255,255,255,0.12); color: #FFFFFF; border-color: rgba(255,255,255,0.25);">STAY INFORMED</div>
+        <h2 style="font-size: clamp(2rem, 3.8vw, 3rem); margin-bottom: 1.25rem;">STAY AHEAD OF REGULATORY &amp; TAX DEADLINES</h2>
+        <p style="font-size: 1.15rem; color: #CBD5E1; margin-bottom: 2rem;">
+          Get our monthly corporate advisory bulletin summarizing new MCA e-forms, GST council decisions, and tax relief schemes.
+        </p>
+        <form class="newsletter-form" style="max-width: 500px; margin-inline: auto; margin-bottom: 2rem;">
+          <input type="email" class="newsletter-input" placeholder="Enter your business email" required aria-label="Business email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <div>
+          <a href="contact.html#contact-form-section" style="color: #60A5FA; font-weight: 600; text-decoration: underline;">Or schedule a 1-on-1 consultation with an advisor →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+                <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #FFFFFF;">
+            <div class="brand-icon-box">
+              <img src="assets/images/logo.svg" alt="Verdant Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-title-wrap">
+              <span class="brand-title" style="color: #FFFFFF;">VERDANT</span>
+              <span class="brand-subtitle" style="color: #60A5FA;">Business Services</span>
+            </div>
+          </a>
+          <p>Professional corporate consulting, legal entity registration, GST services, and annual statutory compliance.</p>
+          <div class="footer-social-links" aria-label="Social media links">
+            <a href="https://linkedin.com" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://twitter.com" class="footer-social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="https://facebook.com" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://youtube.com" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home 1</a>
+            <a href="home-2.html" class="footer-link">Home 2</a>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="services.html" class="footer-link">Services</a>
+            <a href="products.html" class="footer-link">Products</a>
+            <a href="pricing.html" class="footer-link">Pricing</a>
+            <a href="resources.html" class="footer-link">Resources</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <div class="footer-links">
+            <a href="services.html" class="footer-link">Company Registration</a>
+            <a href="services.html" class="footer-link">GST & Taxation</a>
+            <a href="services.html" class="footer-link">Legal Documentation</a>
+            <a href="services.html" class="footer-link">Annual ROC Filing</a>
+            <a href="services.html" class="footer-link">Director KYC</a>
+            <a href="services.html" class="footer-link">Trademark Filing</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Support</h4>
+          <div class="footer-links">
+            <a href="login.html" class="footer-link">Client Login</a>
+            <a href="register.html" class="footer-link">Register Account</a>
+            <a href="dashboard.html" class="footer-link">Client Portal</a>
+            <a href="resources.html" class="footer-link">Knowledgebase & Guides</a>
+            <a href="contact.html" class="footer-link">Helpdesk Support</a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-newsletter-col">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 1rem;">Subscribe to monthly regulatory updates, compliance deadlines, and tax notices.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your business email" required aria-label="Business email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Verdant Business Services Pvt Ltd. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Legal Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" aria-label="Scroll to top of page">↑</button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactions.js"></script>
+</body>
+</html>
+
