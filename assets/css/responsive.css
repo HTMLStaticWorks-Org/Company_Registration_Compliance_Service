@@ -226,6 +226,39 @@
     height: calc(100vh - 70px);
   }
 
+  /* Home 2 Hero Section Centered Alignment & 2 Horizontal Buttons on Mobile */
+  .hero-glass-container,
+  .hero-glass-center-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .hero-glass-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    flex-wrap: nowrap !important;
+    width: auto !important;
+  }
+
+  .hero-glass-actions .hero-btn-solid,
+  .hero-glass-actions .hero-btn-ghost {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    width: auto !important;
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.9rem !important;
+    white-space: nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
   /* Hero Section Mobile 1-by-1 Stacked Alignment (Image, Text, Buttons) */
   .hero-split {
     grid-template-columns: 1fr !important;

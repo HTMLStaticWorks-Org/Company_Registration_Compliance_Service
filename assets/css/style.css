@@ -2408,17 +2408,26 @@ p {
   position: relative;
   z-index: 3;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1.18fr;
-  gap: clamp(2rem, 5vw, 4.5rem);
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 960px;
+  margin-inline: auto;
 }
 
-/* Left side content / scenic showcase */
+/* Centered hero content wrap */
+.hero-glass-center-wrap,
 .hero-glass-left-wrap {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 1.5rem;
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
 }
 
 .hero-glass-pill {
@@ -2437,6 +2446,7 @@ p {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   width: fit-content;
+  margin-inline: auto;
 }
 
 .hero-pulse-dot {
@@ -2455,26 +2465,50 @@ p {
 }
 
 .hero-left-headline {
-  font-size: clamp(2.2rem, 3.8vw, 3.5rem);
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
   font-weight: 800;
   line-height: 1.15;
   color: #FFFFFF;
   letter-spacing: -0.02em;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   margin: 0;
+  text-align: center;
+  max-width: 840px;
+  margin-inline: auto;
+}
+
+.hero-glass-desc {
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 auto;
+  max-width: 680px;
+  text-align: center;
+}
+
+.hero-glass-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: nowrap;
+  margin: 0.5rem auto 0;
 }
 
 .hero-left-badge-box {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.25rem;
+  padding: 0.85rem 1.35rem;
   background: rgba(10, 25, 47, 0.6);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-md);
   width: fit-content;
+  margin-inline: auto;
+  margin-top: 0.5rem;
 }
 
 .hero-left-badge-val {
@@ -2821,16 +2855,12 @@ p {
 /* Responsive adjustments */
 @media (max-width: 991px) {
   .hero-glass-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.75rem;
   }
+  .hero-glass-center-wrap,
   .hero-glass-left-wrap {
     text-align: center;
     align-items: center;
-  }
-  .hero-glass-card {
-    max-width: 600px;
-    margin-inline: auto;
   }
   .section-monitor-panel {
     padding: 2.5rem 0;
@@ -2844,17 +2874,34 @@ p {
   .monitor-grid {
     grid-template-columns: 1fr;
   }
-  .hero-glass-card {
-    padding: 1.75rem 1.25rem;
-  }
   .hero-glass-actions {
-    flex-direction: column;
-    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    flex-wrap: nowrap !important;
+    width: auto !important;
   }
   .hero-btn-solid,
   .hero-btn-ghost {
-    width: 100%;
-    justify-content: center;
+    display: inline-flex !important;
+    width: auto !important;
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.9rem !important;
+    white-space: nowrap !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-glass-actions {
+    gap: 0.5rem !important;
+  }
+  .hero-btn-solid,
+  .hero-btn-ghost {
+    padding: 0.7rem 0.95rem !important;
+    font-size: 0.82rem !important;
   }
 }
 
