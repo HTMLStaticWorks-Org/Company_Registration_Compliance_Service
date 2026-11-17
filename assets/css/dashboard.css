@@ -473,6 +473,41 @@ body.dashboard-layout {
   font-size: 0.78rem;
 }
 
+#tab-services .dash-info-footer {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 0.65rem !important;
+  padding-top: 0.85rem !important;
+}
+
+#tab-services .dash-info-footer span {
+  white-space: nowrap !important;
+}
+
+#tab-services .dash-info-footer .btn {
+  width: 100% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+/* Notifications Page Section 04 & Document Centre Section 04: 2x2 Card Alignment */
+@media (min-width: 768px) {
+  #tab-notifications .dash-section:last-child .grid-4,
+  #tab-documents .grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+#tab-documents .dash-info-footer span {
+  white-space: nowrap !important;
+}
+
 /* Summary Metrics Cards (Even Number 4) */
 .dash-metrics-grid {
   display: grid;
@@ -631,6 +666,7 @@ body.dashboard-layout {
 .table-responsive {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .dash-table {
@@ -648,12 +684,46 @@ body.dashboard-layout {
   border-bottom: 1px solid var(--border-light);
   font-weight: 700;
   background-color: var(--bg-surface);
+  white-space: nowrap;
 }
 
 .dash-table td {
   padding: 1.1rem 1rem;
   border-bottom: 1px solid var(--border-light);
   font-size: 0.92rem;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.dash-table td .btn {
+  width: 124px !important;
+  min-width: 124px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0.45rem 0.75rem !important;
+  font-size: 0.82rem !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+#tab-applications .dash-card div:has(> .btn + .btn) .btn,
+.dash-card div[style*="display: flex"] > .btn.btn-sm {
+  width: 136px !important;
+  min-width: 136px !important;
+  height: 38px !important;
+  min-height: 38px !important;
+  padding: 0.5rem 0.85rem !important;
+  font-size: 0.85rem !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
 }
 
 .dash-table tr:hover td {
@@ -669,6 +739,8 @@ body.dashboard-layout {
   border-radius: var(--radius-full);
   font-size: 0.78rem;
   font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .status-pill.success {
@@ -813,6 +885,97 @@ body.dashboard-layout {
   .dash-metrics-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* 1024px, 768px & Mobile: Single-Line Table Text, Status Pills & SLA Alignment */
+  .table-responsive {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    display: block !important;
+  }
+
+  .dash-table {
+    width: 100% !important;
+    min-width: 620px !important;
+  }
+
+  .dash-table th,
+  .dash-table td {
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+    padding: 0.85rem 0.85rem !important;
+  }
+
+  .dash-table td .status-pill,
+  .dash-pane .status-pill {
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  .dash-table td .btn {
+    width: 124px !important;
+    min-width: 124px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    padding: 0.45rem 0.75rem !important;
+    font-size: 0.82rem !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  #tab-applications .dash-card div:has(> .btn + .btn) .btn,
+  .dash-card div[style*="display: flex"] > .btn.btn-sm {
+    width: 136px !important;
+    min-width: 136px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.85rem !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  #tab-applications .dash-card div[style*="border-top: 1px solid"] {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.65rem !important;
+    padding-top: 0.85rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  #tab-applications .dash-card div[style*="border-top: 1px solid"] .status-pill,
+  #tab-applications .dash-card div[style*="border-top: 1px solid"] span {
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    line-height: 1.4 !important;
+  }
+
+  .dash-info-footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.5rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  .dash-info-footer .status-pill,
+  .dash-info-footer span {
+    white-space: nowrap !important;
+  }
 }
 
 @media (max-width: 900px) {
@@ -885,6 +1048,42 @@ body.dashboard-layout {
     white-space: nowrap !important;
     font-size: 0.78rem !important;
     padding: 0.3rem 0.75rem !important;
+  }
+
+  #tab-applications .dash-card div[style*="border-top: 1px solid"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.65rem !important;
+    padding-top: 0.85rem !important;
+  }
+
+  #tab-applications .dash-card div[style*="border-top: 1px solid"] span {
+    white-space: nowrap !important;
+    font-size: clamp(0.75rem, 2.8vw, 0.84rem) !important;
+  }
+
+  /* Overview Banner Card Status Pills 1-by-1 Stacked Alignment on Mobile */
+  .dash-banner-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 1.25rem 1rem !important;
+    gap: 1rem !important;
+    overflow: hidden !important;
+  }
+
+  .dash-banner-card > div:last-child,
+  .dash-banner-card div[style*="display: flex"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.6rem !important;
+    width: 100% !important;
+  }
+
+  .dash-banner-card .status-pill {
+    align-self: flex-start !important;
+    white-space: nowrap !important;
   }
 }
 
